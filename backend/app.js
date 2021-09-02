@@ -1,19 +1,16 @@
 // Importieren der benötigten Node Pakete
-const express = require("express");
+const express = require('express');
 const app = express();
-const bodyParser = require("body-parser")
 const mongoose = require('mongoose')
 
 // Importieren der Mongoose Schemata
- const clinicRoutes = require('./routes/clinic')
- const countryRoutes = require('./routes/country')
- const userRoutes = require('./routes/user')
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+ //const clinicRoutes = require('./routes/clinic')
+
+
 
 //#region Database connection
 //Verbindung mit der lokalen MongoDB
-mongoose.connect('mongodb://myUserAdmin:12345@127.0.0.1:27017/admin')
+mongoose.connect('mongodb+srv://Trashmaster_standardUser:JlxOlswzSfHpOL5f@clustersweteam1.9dhpv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(()=>{
     console.log('connected to database!')
   })
@@ -33,8 +30,6 @@ app.use((request, response, next) =>{
 //#endregion
 
 //Nutzung der Schemata und export des gesamten app Moduls
-app.use(clinicRoutes)
-app.use(userRoutes)
-app.use(countryRoutes)
+//app.use(countryRoutes)
 module.exports = app;
 
