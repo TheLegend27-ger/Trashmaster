@@ -1,3 +1,4 @@
+
 //Front End Framework Data Model
 export interface CountryData{
   id: string;
