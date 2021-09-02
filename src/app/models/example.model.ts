@@ -1,4 +1,4 @@
-//Front End Framework Data Model kk
+//Front End Framework Data Model
 export interface CountryData{
   id: string;
   CountryCode: string;
