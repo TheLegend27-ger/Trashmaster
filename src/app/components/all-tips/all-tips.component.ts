@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-all-tips',
+  templateUrl: './all-tips.component.html',
+  styleUrls: ['./all-tips.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class AllTipsComponent implements OnInit, OnDestroy {
 
   constructor(public componentService: componentService) { }
 
