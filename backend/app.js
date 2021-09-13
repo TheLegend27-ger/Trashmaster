@@ -4,8 +4,9 @@ const app = express();
 const mongoose = require('mongoose')
 
 // Importieren der Mongoose Schemata
- //const clinicRoutes = require('./routes/clinic')
-
+const questionRoutes = require('./routes/questionRoute.js');
+const tipRoutes = require('./routes/tipRoute.js');
+const imageRoutes = require('./routes/imageRoute.js');
 
 
 //#region Database connection
@@ -30,6 +31,8 @@ app.use((request, response, next) =>{
 //#endregion
 
 //Nutzung der Schemata und export des gesamten app Moduls
-//app.use(countryRoutes)
+app.use(questionRoutes)
+app.use(tipRoutes)
+app.use(imageRoutes)
 module.exports = app;
 

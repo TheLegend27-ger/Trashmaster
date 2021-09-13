@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MaterialModule } from 'src/app/material';
 import { componentService } from '../componentService.service';
 
 @Component({

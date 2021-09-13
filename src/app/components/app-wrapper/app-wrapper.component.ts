@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { componentService } from '../componentService.service';
 
 @Component({
-  selector: 'app-app-wrapper',
+  selector: 'app-wrapper',
   templateUrl: './app-wrapper.component.html',
   styleUrls: ['./app-wrapper.component.scss']
 })
@@ -24,6 +24,7 @@ export class AppWrapperComponent implements OnInit, OnDestroy {
       this.dataSource.sort = this.sort
     });
     */
+   let mytips  = this.componentService.getTips()
   }
   //#endregion
 

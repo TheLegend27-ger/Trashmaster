@@ -1,12 +1,13 @@
 //#region Imports
 import {Injectable} from '@angular/core'
 import {HttpClient} from "@angular/common/http";
-import { Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {map} from 'rxjs/operators'
 //import { element } from 'protractor';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { TipData } from '../models/tip.model';
+import { QuestionData } from '../models/question.model';
 //#endregion
 
 @Injectable({providedIn: 'root'})
@@ -32,17 +33,18 @@ export class componentService{
   private tipsUpdated = new Subject<TipData[]>();
   //Lokale Instanz der Tips
   private tips: TipData[] =[];
-  //private singleTip: TipData;
+
   //#region getTips
   getTips(){
     this.http
       .get<{message: string, tips: any}>('http://localhost:3000/api/gettips')
       .pipe(map((tipData) => {
-        return tipData.tips.map(tip => {
+        return tipData.tips.map((tip:any) => {
           return{
             id: tip._id,
-            TipName: tip.TipName,
-            TipContent: tip.TipContent,
+            Title: tip.Title,
+            Text: tip.Text,
+            ImageNumber: tip.ImageNumber
           }
         })
       }))
@@ -53,6 +55,37 @@ export class componentService{
       });
   }
   //#endregion
+  //#endregion
+
+  //#region Questions
+  private questionsUpdated = new Subject<QuestionData[]>();
+  //Lokale Instanz der Questions
+  private questions: QuestionData[] =[];
+
+  //#region getQuestions
+  getQuestions(){
+    this.http
+      .get<{message: string, questions: any}>('http://localhost:3000/api/getquestions')
+      .pipe(map((questionData) => {
+        return questionData.questions.map((question:any) => {
+          return{
+            id: question._id,
+            Title: question.Title,
+            Question: question.Question,
+            AnswerOptions: question.AnswerOptions,
+            Answer: question.Answer,
+          }
+        })
+      }))
+      .subscribe((transformedQuestions) => {
+        this.questions = transformedQuestions;
+        this.questionsUpdated.next([...this.questions])
+        console.log(transformedQuestions)
+      });
+  }
+  //#endregion
+  //#endregion
+
 
 
 /*
@@ -119,11 +152,7 @@ export class componentService{
 }
   //#endregion
 
-  //#region getClinicAuthors
-  //getClinicAuthors(clinic: ClinicData){
-  //  return this.getUsersByCountry(clinic.ClinicCountryCode)
-  //}
-  //#endregion
+
 
   //#endregion
 
