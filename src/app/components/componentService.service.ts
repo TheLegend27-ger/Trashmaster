@@ -55,6 +55,16 @@ export class componentService{
       });
   }
   //#endregion
+  //#region getSomeTips
+  getSomeTips(){
+
+  }
+  //#endregion
+  //#region getSomeTips
+  getSingleTip(){
+
+  }
+  //#endregion
   //#endregion
 
   //#region Questions
@@ -82,6 +92,11 @@ export class componentService{
         this.questionsUpdated.next([...this.questions])
         console.log(transformedQuestions)
       });
+  }
+  //#endregion
+  //#region getQuestions
+  getSingleQuestion(){
+
   }
   //#endregion
   //#endregion

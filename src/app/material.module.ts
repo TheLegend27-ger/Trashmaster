@@ -68,7 +68,6 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatDialogModule,
     MatRadioModule,
     MatButtonToggleModule
-  ],
-
+  ]
 })
 export class MaterialModule{}

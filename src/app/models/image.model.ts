@@ -1,6 +1,6 @@
 
 //Front End Framework Data Model
-export interface ImageData{
+export interface ImageDataModel{
   id: string;
   Title: string;
   ImageNumber: Number;
