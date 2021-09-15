@@ -16,7 +16,10 @@ import { AllTipsComponent } from './components/all-tips/all-tips.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { DataUploaderComponent } from './components/data-uploader/data-uploader.component';
 import { ConfirmDialogComponent } from './components/confirmationdialog/confirm-dialog.component';
-
+import { DataUploaderTipsOverviewComponent } from './components/data-uploader/data-uploader-tips-overview/data-uploader-tips-overview.component';
+import { DataUploaderQuestionsOverviewComponent } from './components/data-uploader/data-uploader-questions-overview/data-uploader-questions-overview.component';
+import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
+import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,11 @@ import { ConfirmDialogComponent } from './components/confirmationdialog/confirm-
     AllTipsComponent,
     QuestionnaireComponent,
     DataUploaderComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    DataUploaderTipsOverviewComponent,
+    DataUploaderQuestionsOverviewComponent,
+    DataUploaderQuestionsEditorComponent,
+    DataUploaderTipsEditorComponent
   ],
   imports: [
     BrowserModule,
