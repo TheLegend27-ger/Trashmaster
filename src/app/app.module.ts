@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { AppWrapperComponent } from './components/app-wrapper/app-wrapper.component';
 import { HeaderComponent } from './components/header/header.component';
 import { QuizComponent } from './components/quiz/quiz.component';
-import { AllTipsComponent } from './components/all-tips/all-tips.component';
+import { AllTipsComponent } from './components/tips/all-tips/all-tips.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { DataUploaderComponent } from './components/data-uploader/data-uploader.component';
 import { ConfirmDialogComponent } from './components/confirmationdialog/confirm-dialog.component';
@@ -20,6 +20,7 @@ import { DataUploaderTipsOverviewComponent } from './components/data-uploader/da
 import { DataUploaderQuestionsOverviewComponent } from './components/data-uploader/data-uploader-questions-overview/data-uploader-questions-overview.component';
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
+import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DataUploaderTipsEditorComponent } from './components/data-uploader/data
     DataUploaderTipsOverviewComponent,
     DataUploaderQuestionsOverviewComponent,
     DataUploaderQuestionsEditorComponent,
-    DataUploaderTipsEditorComponent
+    DataUploaderTipsEditorComponent,
+    SomeTipsComponent
   ],
   imports: [
     BrowserModule,

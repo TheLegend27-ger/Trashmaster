@@ -1,27 +1,35 @@
-<p>
-  <mat-toolbar>
-    <button mat-button (click)="router.navigate(['/']);">
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button (click)="router.navigate(['/'])">
       <p>HOME</p>
     </button>
-  <button mat-button (click)="router.navigate(['/alltips']);">
-    <p>alltips</p>
-  </button>
-  <button mat-button (click)="router.navigate(['/questionnaire']);">
-    <p>questionnaire</p>
-  </button>
-  <button mat-button (click)="router.navigate(['/quiz']);">
-    <p>quiz</p>
-  </button>
-  <button mat-button (click)="router.navigate(['/data']);">
-    <p>data uploader</p>
-  </button>
+    <button mat-button (click)="router.navigate(['/alltips'])">
+      <p>alltips</p>
+    </button>
+    <button mat-button (click)="router.navigate(['/questionnaire'])">
+      <p>questionnaire</p>
+    </button>
+    <button mat-button (click)="router.navigate(['/quiz'])">
+      <p>quiz</p>
+    </button>
+    <button mat-button (click)="router.navigate(['/data'])">
+      <p>data uploader</p>
+    </button>
 
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon>share</mat-icon>
- </button>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
-</p>

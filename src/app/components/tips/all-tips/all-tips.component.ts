@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
-import { componentService } from '../componentService.service';
+import { componentService } from '../../componentService.service';
 
 @Component({
   selector: 'app-all-tips',
