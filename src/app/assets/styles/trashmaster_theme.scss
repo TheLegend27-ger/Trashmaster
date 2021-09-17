@@ -20,10 +20,10 @@ $app-primary: mat-palette($md-trashmastergreen);
 $app-accent: mat-palette($md-trashmasterpurple, A400, A100, A700);
 
 // The warn palette is optional (defaults to red).
-$app-warn: mat-palette($bio-tangerine, A400, A100, A700);
+//$app-warn: mat-palette($bio-tangerine, A400, A100, A700);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+$app-theme: mat-light-theme($app-primary, $app-accent);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
