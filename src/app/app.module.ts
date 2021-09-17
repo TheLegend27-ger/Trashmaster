@@ -21,6 +21,8 @@ import { DataUploaderQuestionsOverviewComponent } from './components/data-upload
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
 import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
+import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
+import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
     DataUploaderQuestionsOverviewComponent,
     DataUploaderQuestionsEditorComponent,
     DataUploaderTipsEditorComponent,
-    SomeTipsComponent
+    SomeTipsComponent,
+    OneTipComponent,
+    OneQuestionComponent
   ],
   imports: [
     BrowserModule,

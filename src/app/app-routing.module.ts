@@ -6,13 +6,16 @@ import { DataUploaderComponent } from './components/data-uploader/data-uploader.
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
+import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
+import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
+
 
 const routes: Routes = [
-  { path: '', component: SomeTipsComponent },
+  { path: '', component: OneTipComponent },
   { path: 'alltips', component: AllTipsComponent },
   { path: 'data', component: DataUploaderComponent },
   { path: 'questionnaire', component: QuestionnaireComponent },
-  { path: 'quiz', component: QuizComponent },
+  { path: 'quiz', component: OneQuestionComponent },
 ];
 
 
