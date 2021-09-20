@@ -1,21 +1,24 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
 
-    <button mat-icon-button class="delete" aria-label="delete-button">
-      <mat-icon>delete</mat-icon>
+    <!-- <img src="src\app\assets\Images\Trashmaster.svg" alt=""> -->
+    <!-- Logo wird nicht angezeigt keine Ahnung warum-->
+
+    <button mat-flat-button	 (click)="router.navigate(['/'])">
+      <p>home</p>
     </button>
 
     <button mat-flat-button	 (click)="router.navigate(['/alltips'])">
-      <p>Alltips</p>
+      <p>alltips</p>
     </button>
     <button mat-flat-button	 (click)="router.navigate(['/questionnaire'])">
-      <p>Questionnaire</p>
+      <p>questionnaire</p>
     </button>
     <button mat-flat-button	 (click)="router.navigate(['/quiz'])">
-      <p>Quiz</p>
+      <p>quiz</p>
     </button>
     <button mat-flat-button	 (click)="router.navigate(['/data'])">
-      <p>Data Uploader</p>
+      <p>data uploader</p>
     </button>
 
     <span class="example-spacer"></span>
@@ -26,3 +29,4 @@
 
   </mat-toolbar-row>
 </mat-toolbar>
+
