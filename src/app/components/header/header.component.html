@@ -1,35 +1,28 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-button (click)="router.navigate(['/'])">
-      <p>HOME</p>
+
+    <button mat-icon-button class="delete" aria-label="delete-button">
+      <mat-icon>delete</mat-icon>
     </button>
-    <button mat-button (click)="router.navigate(['/alltips'])">
-      <p>alltips</p>
+
+    <button mat-flat-button	 (click)="router.navigate(['/alltips'])">
+      <p>Alltips</p>
     </button>
-    <button mat-button (click)="router.navigate(['/questionnaire'])">
-      <p>questionnaire</p>
+    <button mat-flat-button	 (click)="router.navigate(['/questionnaire'])">
+      <p>Questionnaire</p>
     </button>
-    <button mat-button (click)="router.navigate(['/quiz'])">
-      <p>quiz</p>
+    <button mat-flat-button	 (click)="router.navigate(['/quiz'])">
+      <p>Quiz</p>
     </button>
-    <button mat-button (click)="router.navigate(['/data'])">
-      <p>data uploader</p>
+    <button mat-flat-button	 (click)="router.navigate(['/data'])">
+      <p>Data Uploader</p>
     </button>
 
     <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      <mat-icon>favorite</mat-icon>
+
+    <button mat-icon-button (click)="router.navigate(['/data'])" class="search" aria-label="search-button">
+      <mat-icon>search</mat-icon>
     </button>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <mat-icon>share</mat-icon>
-    </button>
+
   </mat-toolbar-row>
 </mat-toolbar>
