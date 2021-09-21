@@ -1,15 +1,10 @@
 
-<a [routerLink]="['/']" ><img class="logo" src='../../../assets/images/Logo.png' /></a>
+
 <mat-toolbar color="primary">
 
   <mat-toolbar-row>
 
-    <!-- <img src="src\app\assets\Images\Trashmaster.svg" alt=""> -->
-    <!-- Logo wird nicht angezeigt keine Ahnung warum-->
-
-    <button mat-flat-button	 (click)="router.navigate(['/'])">
-      <p>home</p>
-    </button>
+    <a [routerLink]="['/']" ><img class="logo" src='../../../assets/images/Logo.png' /></a>
 
     <button mat-flat-button	 (click)="router.navigate(['/alltips'])">
       <p>alltips</p>
@@ -26,10 +21,14 @@
 
     <span class="example-spacer"></span>
 
-    <button mat-icon-button (click)="router.navigate(['/data'])" class="search" aria-label="search-button">
-      <mat-icon>search</mat-icon>
-    </button>
+    <mat-icon class="searchIcon" matPrefix>search</mat-icon>
+    <mat-form-field class="searchbar">
+      <input matInput (keyup)="applyFilter($event)" placeholder="Suche ...">
+    </mat-form-field>
 
   </mat-toolbar-row>
 </mat-toolbar>
+
+
+
 

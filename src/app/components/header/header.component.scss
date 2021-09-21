@@ -5,11 +5,8 @@
 
 .logo {
   display: inline-block;
-  vertical-align: top;
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-  margin-top: 15px;
+  height: 70px;
+  vertical-align:middle;
 }
 
 .mat-flat-button{
@@ -33,12 +30,20 @@
   color: #ffffff;
 }
 
-.search {
-  height: 60px;
-  width: 60px;
+
+
+.searchIcon {
+  line-height:20px;
+  margin-right: 10px;
+  color: #ffffff;
 }
 
-.search:hover {
-  background-color: #41d303;
+
+.searchbar {
   color: #ffffff;
+}
+
+.searchbar:hover {
+  color: #beffa2;
+  font-display: none;
 }
