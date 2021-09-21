@@ -43,7 +43,11 @@
   color: #ffffff;
 }
 
-.searchbar:hover {
-  color: #beffa2;
-  font-display: none;
+.searchbar:active {
+  color: #00ff2a;
 }
+
+.mat-form-field {
+  font-size: 14px;
+}
+
