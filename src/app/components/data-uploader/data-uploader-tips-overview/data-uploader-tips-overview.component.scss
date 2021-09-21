@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+}
+.mat-form-field {
+  font-size: 1rem;
+  width: 94%;
+}
+.searchIcon{
+  margin-right: 10px;
+}
+
+
+.mat-column-Delete{
+  flex-direction: column;
+   justify-content:center;
+   text-align: center;
+}
+.mat-column-Edit{
+  flex-direction: column;
+  justify-content:center;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+

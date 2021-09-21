@@ -8,4 +8,4 @@ const imageDataSchema = mongoose.Schema({
   ContentType: { type: String}
 });
 
-module.exports = mongoose.model('imageData', imageDataSchema);
+module.exports = mongoose.model('imageDataModel', imageDataSchema);

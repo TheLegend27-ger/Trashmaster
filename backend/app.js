@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 
+
 // Importieren der Mongoose Schemata
 const questionRoutes = require('./routes/questionRoute.js');
 const tipRoutes = require('./routes/tipRoute.js');
