@@ -1,7 +1,44 @@
 .example-spacer {
   flex: 1 1 auto;
 }
-.logo{
-  width: 200px;
 
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.mat-flat-button{
+  background-color: #3cc800,;
+  text-transform: uppercase;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+  line-height:60px;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  color: #ffffff;
+
+}
+
+.mat-flat-button:hover{
+  background-color: #41d303;
+  color: #ffffff;
+}
+
+.search {
+  height: 60px;
+  width: 60px;
+}
+
+.search:hover {
+  background-color: #41d303;
+  color: #ffffff;
 }
