@@ -10,8 +10,11 @@ import { TipData } from '../models/tip.model';
 import { QuestionData } from '../models/question.model';
 //#endregion
 
+
+
 @Injectable({providedIn: 'root'})
 export class componentService{
+
   getTipsUpdateListener() {
    return this.tipsUpdated.asObservable();
   }
@@ -41,14 +44,14 @@ export class componentService{
 
   getTips(){
     this.http
-      .get<{message: string, tips: any}>('http://localhost:3000/api/gettips')
+      .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
       .pipe(map((tipData:any) => {
         return tipData.tips.map((tip:any) => {
           return{
             id: tip._id,
             Title: tip.Title,
             Text: tip.Text,
-            ImageNumber: tip.ImageNumber
+            ImageBase64: tip.ImageBase64
           }
         })
       }))
@@ -62,7 +65,7 @@ export class componentService{
 
   }
   deletetip(tipId: any) {
-    this.http.delete('http://localhost:3000/api/deletetip/' + tipId)
+    this.http.delete('http://localhost:3000/api/tips/' + tipId)
     .subscribe(() =>{
       const updatedTips = this.tips.filter(tip => tip.id !== tipId)
       this.tips = updatedTips;
@@ -71,29 +74,36 @@ export class componentService{
     });
   }
   getSingleTip (tipId: any){
-    return {...this.tips.find(tip => tip.id === tipId)}
+    return this.http.get<{ _id: string, Title: string, Text: string, ImageBase64: string }>(
+      "http://localhost:3000/api/tips/" + tipId
+    );
+
   }
   updateTip(id:any ,tip: TipData){
     const tipToUpdate: TipData={
       id: tip.id,
       Title: tip.Title,
       Text: tip.Text,
-      ImageNumber: tip.ImageNumber
+      ImageBase64: tip.ImageBase64
     }
     console.log(id)
-    this.http.put('http://localhost:3000/api/updatetip/' + id , tipToUpdate)
+    this.http.put('http://localhost:3000/api/tips/' + id , tipToUpdate)
       .subscribe(response => {
         console.log(response)
         //this.navigateToRoot();
       });
   }
   addTip(tip: TipData){
-    this.http.post<{message: string}>('http://localhost:3000/api/addtip', tip)
+    console.log(tip)
+    this.http.post<{message: string}>('http://localhost:3000/api/tips/', tip)
       .subscribe((responseData) =>{
         this.tips.push(tip);
         this.tipsUpdated.next([...this.tips]);
         this.navigateToRoot();
       });
+  }
+  addImage(image:any){
+    //-----------------------------------------
   }
   //#endregion
 

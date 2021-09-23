@@ -17,18 +17,21 @@ import {
   templateUrl: './data-uploader.component.html',
   styleUrls: ['./data-uploader.component.scss'],
 })
-export class DataUploaderComponent implements OnInit, OnDestroy {
+export class DataUploaderComponent/* implements /*OnInit, OnDestroy*/ {
   constructor(
     public componentService: componentService,
     public route: ActivatedRoute,
     public dialog: MatDialog
   ) {}
-
+/*
   tip: TipData = {
     id: '',
     Title: '',
     Text: '',
-    ImageNumber: 0,
+    TipImage: {
+      data: undefined,
+      contentType: undefined
+    }
   };
   question: QuestionData = {
     id: '',
@@ -46,27 +49,7 @@ export class DataUploaderComponent implements OnInit, OnDestroy {
 
   //#region ngOnInit
   ngOnInit(): void {
-    this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      if (paramMap.has('tipId')) {
-        this.mode = 'edit';
-        this.tipId = paramMap.get('tipId');
-        //this.tip = this.componentService.getSingleTip(this.tipId)
-      } else if (paramMap.has('imageId')) {
-        this.mode = 'edit';
-        this.tipId = paramMap.get('imageId');
-        //this.tip = this.componentService.getSingleImage(this.imageId)
-      } else if (paramMap.has('questionId')) {
-        this.mode = 'edit';
-        this.tipId = paramMap.get('questionId');
-        //this.tip = this.componentService.getSinglequestion(this.questionId)
-      } else {
-        //this.tip
-        this.mode = 'create';
-        this.tipId = null;
-        this.imageId = null;
-        this.questionId = null;
-      }
-    });
+
   }
   //#endregion
 
@@ -108,5 +91,5 @@ export class DataUploaderComponent implements OnInit, OnDestroy {
       } else {
       }
     });
-  }
+  }*/
 }
