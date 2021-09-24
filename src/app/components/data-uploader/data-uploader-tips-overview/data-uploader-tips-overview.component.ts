@@ -55,7 +55,7 @@ export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
         this.dataSource.sort = this.sort;
         setTimeout(() => {
           this.isLoading = false;
-        }, 1000);
+        }, 1);
       });
   }
   ngOnDestroy(): void {
@@ -69,11 +69,10 @@ export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
     console.log(tip);
   }
   openConfirmDialog(tipId: any) {
+
     const title = 'Confirm deletion progress';
     const message =
-      'Are you sure you want to delete ' +
-      this.componentService.getSingleTip(tipId).Title +
-      '?';
+      'Are you sure you want to delete ?';
     this.confirmDeleteDialog(title, message, tipId);
   }
   applyFilter(event: Event) {

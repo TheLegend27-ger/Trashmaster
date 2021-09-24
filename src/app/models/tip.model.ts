@@ -3,5 +3,5 @@ export interface TipData{
   id: string;
   Title: string;
   Text: string;
-  ImageNumber: Number;
+  ImageBase64: string;
 }
