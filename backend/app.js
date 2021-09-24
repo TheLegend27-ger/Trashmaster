@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:500
 // Importieren der Mongoose Schemata
 const questionRoutes = require('./routes/questionRoute');
 const tipRoutes = require('./routes/tipRoute');
-const imageRoutes = require('./routes/imageRoute');
+
 
 
 
@@ -42,6 +42,6 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
 //Nutzung der Schemata und export des gesamten app Moduls
 app.use(questionRoutes)
 app.use("/api/tips",tipRoutes)
-app.use(imageRoutes)
+
 module.exports = app;
 
