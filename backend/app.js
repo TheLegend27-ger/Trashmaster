@@ -3,23 +3,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 
-// Importieren der Mongoose Schemata
-const questionRoutes = require('./routes/questionRoute.js');
-const tipRoutes = require('./routes/tipRoute.js');
-const imageRoutes = require('./routes/imageRoute.js');
-
-
-//#region Database connection
-//Verbindung mit der lokalen MongoDB
-mongoose.connect('mongodb+srv://Trashmaster_standardUser:JlxOlswzSfHpOL5f@clustersweteam1.9dhpv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-  .then(()=>{
-    console.log('connected to database!')
-  })
-  .catch(()=>{
-    console.log('connection failed!')
-  });
-//#endregion
-
 //#region Node Access configuration
 //Konfiguration der Zugangsberechtigungen
 app.use((request, response, next) =>{
@@ -29,10 +12,36 @@ app.use((request, response, next) =>{
   next();
 });
 //#endregion
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: "50mb"}));
+app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+
+
+// Importieren der Mongoose Schemata
+const questionRoutes = require('./routes/questionRoute');
+const tipRoutes = require('./routes/tipRoute');
+
+
+
+
+
+//#region Database connection
+//Verbindung mit der lokalen MongoDB
+const mongoURI ='mongodb+srv://Trashmaster_standardUser:JlxOlswzSfHpOL5f@clustersweteam1.9dhpv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
+  .then(()=>{
+    console.log('connected to database!')
+  })
+  .catch(()=>{
+    console.log('connection failed!')
+  });
+
+
+
 
 //Nutzung der Schemata und export des gesamten app Moduls
 app.use(questionRoutes)
-app.use(tipRoutes)
-app.use(imageRoutes)
+app.use("/api/tips",tipRoutes)
+
 module.exports = app;
 

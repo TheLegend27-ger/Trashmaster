@@ -10,8 +10,16 @@ import { TipData } from '../models/tip.model';
 import { QuestionData } from '../models/question.model';
 //#endregion
 
+
+
 @Injectable({providedIn: 'root'})
 export class componentService{
+
+  getTipsUpdateListener() {
+   return this.tipsUpdated.asObservable();
+  }
+
+
 
   constructor(private http: HttpClient, private router:Router){}
 
@@ -34,17 +42,16 @@ export class componentService{
   //Lokale Instanz der Tips
   private tips: TipData[] =[];
 
-  //#region getTips
   getTips(){
     this.http
-      .get<{message: string, tips: any}>('http://localhost:3000/api/gettips')
-      .pipe(map((tipData) => {
+      .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
+      .pipe(map((tipData:any) => {
         return tipData.tips.map((tip:any) => {
           return{
             id: tip._id,
             Title: tip.Title,
             Text: tip.Text,
-            ImageNumber: tip.ImageNumber
+            ImageBase64: tip.ImageBase64
           }
         })
       }))
@@ -54,17 +61,50 @@ export class componentService{
         console.log(transformedTips)
       });
   }
-  //#endregion
-  //#region getSomeTips
   getSomeTips(){
 
   }
-  //#endregion
-  //#region getSomeTips
-  getSingleTip(){
+  deletetip(tipId: any) {
+    this.http.delete('http://localhost:3000/api/tips/' + tipId)
+    .subscribe(() =>{
+      const updatedTips = this.tips.filter(tip => tip.id !== tipId)
+      this.tips = updatedTips;
+      this.tipsUpdated.next([...this.tips]);
+      console.log('Deleted!')
+    });
+  }
+  getSingleTip (tipId: any){
+    return this.http.get<{ _id: string, Title: string, Text: string, ImageBase64: string }>(
+      "http://localhost:3000/api/tips/" + tipId
+    );
 
   }
-  //#endregion
+  updateTip(id:any ,tip: TipData){
+    const tipToUpdate: TipData={
+      id: tip.id,
+      Title: tip.Title,
+      Text: tip.Text,
+      ImageBase64: tip.ImageBase64
+    }
+    console.log(id)
+    this.http.put('http://localhost:3000/api/tips/' + id , tipToUpdate)
+      .subscribe(response => {
+        console.log(response)
+        //this.navigateToRoot();
+      });
+  }
+  addTip(tip: TipData){
+    console.log(tip)
+    this.http.post<{message: string}>('http://localhost:3000/api/tips/', tip)
+      .subscribe((responseData) =>{
+        this.tips.push(tip);
+        this.tipsUpdated.next([...this.tips]);
+        this.navigateToRoot();
+      });
+  }
+  addImage(image:any){
+    //-----------------------------------------
+  }
   //#endregion
 
   //#region Questions
@@ -102,72 +142,7 @@ export class componentService{
   //#endregion
 
 
-
-/*
-  //#region getSingleClinic
-  getSingleClinic(clinicId: any){
-    return {...this.clinics.find(clinic => clinic.id === clinicId)}
-  }
-  //#endregion
-
-  //#region updateClinic
-  updateClinic(id:any ,clinic: ClinicData){
-    const clinicToUpdate: ClinicData={
-      id: clinic.id,
-      ClinicName: clinic.ClinicName,
-      ClinicDepartment: clinic.ClinicDepartment,
-      ClinicAdr1: clinic.ClinicAdr1,
-      ClinicAdr2: clinic.ClinicAdr2,
-      ClinicZIP: clinic.ClinicZIP,
-      ClinicCity: clinic.ClinicCity,
-      ClinicSP: clinic.ClinicSP,
-      ClinicCountry: clinic.ClinicCountry,
-      ClinicCountryCode: clinic.ClinicCountry,
-      ClinicPhone: clinic.ClinicPhone,
-      ClinicLa: clinic.ClinicLa,
-      ClinicLo: clinic.ClinicLo,
-      SysLog: clinic.SysLog,
-    }
-    console.log(id)
-    this.http.put('http://localhost:3000/api/updateclinic/' + id , clinicToUpdate)
-      .subscribe(response => {
-        console.log(response)
-        this.navigateToRoot();
-      });
-  }
-  //#endregion
-
-  //#region getClinicsUpdateListener
-  getTipsUpdateListener(){
-    return this.tipsUpdated.asObservable();
-  }
-  //#endregion
-
-  //#region addClinic
-  addClinic(clinic: ClinicData){
-    this.http.post<{message: string}>('http://localhost:3000/api/addclinic', clinic)
-      .subscribe((responseData) =>{
-        this.clinics.push(clinic);
-        this.clinicsUpdated.next([...this.clinics]);
-        this.navigateToRoot();
-      });
-  }
-  //#endregion
-
-  //#region deleteClinic
-  deleteClinic(clinicId: any){
-    this.http.delete('http://localhost:3000/api/deleteclinic/' + clinicId)
-    .subscribe(() =>{
-      const updatedClinics = this.clinics.filter(clinic => clinic.id !== clinicId)
-      this.clinics = updatedClinics;
-      this.clinicsUpdated.next([...this.clinics]);
-      console.log('Deleted!')
-    });
-*/
 }
   //#endregion
-
-
-
   //#endregion
 

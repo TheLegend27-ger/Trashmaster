@@ -5,7 +5,7 @@ import {MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
@@ -21,6 +21,8 @@ import { DataUploaderQuestionsOverviewComponent } from './components/data-upload
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
 import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
+import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
+import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
 
 @NgModule({
   declarations: [
@@ -36,13 +38,14 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
     DataUploaderQuestionsOverviewComponent,
     DataUploaderQuestionsEditorComponent,
     DataUploaderTipsEditorComponent,
-    SomeTipsComponent
+    SomeTipsComponent,
+    OneTipComponent,
+    OneQuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     MaterialModule,
