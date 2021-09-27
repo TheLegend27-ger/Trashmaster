@@ -12,7 +12,7 @@ import { DataUploaderTipsEditorComponent } from './components/data-uploader/data
 
 
 const routes: Routes = [
-  { path: '', component: OneTipComponent },
+  { path: '', component: SomeTipsComponent },
   { path: 'alltips', component: AllTipsComponent },
   { path: 'data', component: DataUploaderComponent },
   { path: 'edittip/:tipId', component: DataUploaderTipsEditorComponent },
