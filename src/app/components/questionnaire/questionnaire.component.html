@@ -1,11 +1,98 @@
-<div class="example-container">
-  <form [formGroup]="options">
-    <div>
-      <mat-radio-group  [formControl]="floatLabelControl">
-        <mat-radio-button value="ja">Ja</mat-radio-button>
-        <mat-radio-button   value="nein">Nein</mat-radio-button>
-        <mat-radio-button   value="ka">Keine Ahnung</mat-radio-button>
-      </mat-radio-group>
-    </div>
-  </form>
-</div>
+<mat-card class="qst">
+<mat-card-title class="qst-title" color="accent">Questionaire</mat-card-title>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Ist das Produkt aus Plastik?</mat-card-title>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Ist das Produkt aus Stoff?</mat-card-title>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Ist das Produkt aus Metal?</mat-card-title>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Ist das Produkt organisch?</mat-card-title>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Kann man das Produkt essen?</mat-card-title>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="frage">
+  <mat-card-title>Hat das Produkt Arme?</mat-card-title>
+  <mat-card-subtitle>(Ist es ein Mensch?)</mat-card-subtitle>
+  <div class="example-container">
+    <form [formGroup]="options">
+      <div>
+        <mat-radio-group  [formControl]="floatLabelControl">
+          <mat-radio-button value="ja">Ja</mat-radio-button>
+          <mat-radio-button value="nein">Nein</mat-radio-button>
+          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div>
+</mat-card>
+
+<mat-card class="save">
+    <button class="save-button" mat-raised-button color="accent" type="submit">Suche</button>
+</mat-card>

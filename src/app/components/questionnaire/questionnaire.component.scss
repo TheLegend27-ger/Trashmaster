@@ -17,3 +17,48 @@
 .example-container .mat-radio-button {
   margin: 0 12px;
 }
+
+.qst {
+  background-color: #b36bff;;
+  border-radius: 10px;
+  margin-top: 1rem;
+  height: 5rem;
+}
+
+.qst-title {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 30px;
+}
+
+.frage{
+  background-color: #3cc800;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.mat-card-title{
+  margin-bottom: 2rem;
+}
+
+.mat-card-subtitle{
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.884);
+}
+
+.save {
+  border-radius: 10px;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.save-button{
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
