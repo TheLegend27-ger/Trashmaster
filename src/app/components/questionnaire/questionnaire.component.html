@@ -1,11 +1,10 @@
 <div class="example-container">
   <form [formGroup]="options">
-    <mat-checkbox [formControl]="hideRequiredControl">Ist das Produkt aus Plastik?</mat-checkbox>
     <div>
-      <mat-radio-group [formControl]="floatLabelControl">
+      <mat-radio-group  [formControl]="floatLabelControl">
         <mat-radio-button value="ja">Ja</mat-radio-button>
-        <mat-radio-button value="nein">Nein</mat-radio-button>
-        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+        <mat-radio-button   value="nein">Nein</mat-radio-button>
+        <mat-radio-button   value="ka">Keine Ahnung</mat-radio-button>
       </mat-radio-group>
     </div>
   </form>

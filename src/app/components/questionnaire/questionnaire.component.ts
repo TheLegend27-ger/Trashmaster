@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
-import { FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 
@@ -12,13 +12,11 @@ import { FormBuilder, FormControl, FormGroup} from '@angular/forms';
 export class QuestionnaireComponent implements OnInit, OnDestroy {
 
   options!: FormGroup;
-  hideRequiredControl = new FormControl(false);
-  floatLabelControl = new FormControl('auto');
+  floatLabelControl = new FormControl();
 
   constructor(public componentService: componentService, fb: FormBuilder) {
 
     this.options = fb.group({
-      hideRequired: this.hideRequiredControl,
       floatLabel: this.floatLabelControl,
     });
 
@@ -28,17 +26,13 @@ export class QuestionnaireComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
 
-
   }
   //#endregion
 
   //#region ngOnDestroy
   ngOnDestroy(){
-
     let test = this.floatLabelControl.value
-
     console.log(test)
-
   }
   //#endregion
 
