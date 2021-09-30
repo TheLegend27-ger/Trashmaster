@@ -23,6 +23,9 @@ import { DataUploaderTipsEditorComponent } from './components/data-uploader/data
 import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
 import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
 import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
+import { Category1Component } from './components/tips/all-tips/category1/category1.component';
+import { Category2Component } from './components/tips/all-tips/category2/category2.component';
+import { Category3Component } from './components/tips/all-tips/category3/category3.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { OneQuestionComponent } from './components/quiz/one-question/one-questio
     DataUploaderTipsEditorComponent,
     SomeTipsComponent,
     OneTipComponent,
-    OneQuestionComponent
+    OneQuestionComponent,
+    Category1Component,
+    Category2Component,
+    Category3Component
   ],
   imports: [
     BrowserModule,

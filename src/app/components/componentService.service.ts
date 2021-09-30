@@ -63,8 +63,8 @@ export class componentService{
         console.log(transformedTips)
       });
   }
-  getSomeTips(){
-
+  getRandomTip(){
+    return this.tips[0]
   }
   deletetip(tipId: any) {
     this.http.delete('http://localhost:3000/api/tips/' + tipId)

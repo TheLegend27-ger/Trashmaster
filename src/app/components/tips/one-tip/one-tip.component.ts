@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./one-tip.component.scss']
 })
 export class OneTipComponent implements OnInit {
-
+  title  = 3;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
