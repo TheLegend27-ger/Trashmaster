@@ -1,1 +1,48 @@
-<p>data-uploader-questions-editor works!</p>
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" (submit)="onSaveQuestion()" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput type="text" formControlName="Title" placeholder="Title">
+      <mat-error *ngIf="form.get('Title')">Please enter a Title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="Question" placeholder="Question">
+      <mat-error *ngIf="form.get('Question')">Please enter a Question.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="Answer1" placeholder="Answer1">
+      <mat-error *ngIf="form.get('Answer1')">Please enter a Question.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="Answer2" placeholder="Answer2">
+      <mat-error *ngIf="form.get('Answer2')">Please enter a Question.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="Answer3" placeholder="Answer3">
+      <mat-error *ngIf="form.get('Answer3')">Please enter a Question.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="Answer4" placeholder="Answer4">
+      <mat-error *ngIf="form.get('Answer4')">Please enter a Question.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select right Answer</mat-label>
+      <mat-select formControlName="Answer">
+        <mat-option value="Answer1">{{this.getAnswerOptions()[0]}}</mat-option>
+        <mat-option value="Answer2">{{this.getAnswerOptions()[1]}}</mat-option>
+        <mat-option value="Answer3">{{this.getAnswerOptions()[2]}}</mat-option>
+        <mat-option value="Answer4">{{this.getAnswerOptions()[3]}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select QuestionType</mat-label>
+      <mat-select formControlName="QuestionType">
+        <mat-option value="blue">blue</mat-option>
+        <mat-option value="red">red</mat-option>
+        <mat-option value="green">green</mat-option>
+        <mat-option value="black">black</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit">Save Question</button>
+  </form>
+</mat-card>

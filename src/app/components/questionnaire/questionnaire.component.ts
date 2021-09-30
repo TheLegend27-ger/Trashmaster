@@ -1,5 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
+import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-questionnaire',
@@ -8,16 +11,28 @@ import { componentService } from '../componentService.service';
 })
 export class QuestionnaireComponent implements OnInit, OnDestroy {
 
-  constructor(public componentService: componentService) { }
+  options!: FormGroup;
+  floatLabelControl = new FormControl();
+
+  constructor(public componentService: componentService, fb: FormBuilder) {
+
+    this.options = fb.group({
+      floatLabel: this.floatLabelControl,
+    });
+
+  }
 
   //#region ngOnInit
   ngOnInit(): void {
+
+
   }
   //#endregion
 
   //#region ngOnDestroy
   ngOnDestroy(){
-
+    let test = this.floatLabelControl.value
+    console.log(test)
   }
   //#endregion
 
