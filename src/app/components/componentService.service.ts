@@ -15,18 +15,20 @@ import { QuestionData } from '../models/question.model';
 @Injectable({providedIn: 'root'})
 export class componentService{
 
+
+
   getTipsUpdateListener() {
    return this.tipsUpdated.asObservable();
   }
-
+  getQuestionsUpdateListener() {
+    return this.questionsUpdated.asObservable();
+   }
 
 
   constructor(private http: HttpClient, private router:Router){}
 
   //#region Example
-  appwrapperUpdateListener(){
-    return "" // this.someVariable.asObservable();
-  }
+
 
 
   //#endregion
@@ -77,7 +79,6 @@ export class componentService{
     return this.http.get<{ _id: string, Title: string, Text: string, ImageBase64: string }>(
       "http://localhost:3000/api/tips/" + tipId
     );
-
   }
   updateTip(id:any ,tip: TipData){
     const tipToUpdate: TipData={
@@ -102,9 +103,6 @@ export class componentService{
         this.navigateToRoot();
       });
   }
-  addImage(image:any){
-    //-----------------------------------------
-  }
   //#endregion
 
   //#region Questions
@@ -112,18 +110,23 @@ export class componentService{
   //Lokale Instanz der Questions
   private questions: QuestionData[] =[];
 
-  //#region getQuestions
+
   getQuestions(){
+    console.log("getquestions")
     this.http
-      .get<{message: string, questions: any}>('http://localhost:3000/api/getquestions')
+      .get<{message: string, questions: any}>('http://localhost:3000/api/questions/')
       .pipe(map((questionData) => {
         return questionData.questions.map((question:any) => {
           return{
             id: question._id,
             Title: question.Title,
             Question: question.Question,
-            AnswerOptions: question.AnswerOptions,
+            Answer1: question.Answer1,
+            Answer2: question.Answer2,
+            Answer3: question.Answer3,
+            Answer4: question.Answer4,
             Answer: question.Answer,
+            QuestionType: question.QuestionType
           }
         })
       }))
@@ -133,16 +136,45 @@ export class componentService{
         console.log(transformedQuestions)
       });
   }
-  //#endregion
-  //#region getQuestions
-  getSingleQuestion(){
 
+
+  updateQuestion(id: any, question: QuestionData) {
+    console.log("updateQuestion")
+    this.http.put('http://localhost:3000/api/questions/' + id , question)
+      .subscribe(response => {
+        console.log(response)
+        //this.navigateToRoot();
+      });
   }
-  //#endregion
-  //#endregion
+  addQuestion(question: QuestionData) {
+    console.log("addQuestion")
+    console.log(question)
+    this.http.post<{message: string}>('http://localhost:3000/api/questions/', question)
+      .subscribe((responseData) =>{
+        this.questions.push(question);
+        this.questionsUpdated.next([...this.questions]);
+        this.navigateToRoot();
+      });
+  }
 
+  getSingleQuestion(questionId: any){
+    console.log("getSingleQuestion")
+    return this.http.get<{ _id: string, Title: string, Question: string, Answer1: string, Answer2: string, Answer3: string, Answer4: string,  Answer: string, QuestionType: string }>(
+      "http://localhost:3000/api/questions/" + questionId
+    );
+  }
+  deletequestion(questionId: any) {
+    console.log("deletequestion")
+    this.http.delete('http://localhost:3000/api/questions/' + questionId)
+    .subscribe(() =>{
+      const updatedQuestions = this.questions.filter(question => question.id !== questionId)
+      this.questions = updatedQuestions;
+      this.questionsUpdated.next([...this.questions]);
+      console.log('Deleted!')
+    });
+  }
 
 }
-  //#endregion
+
   //#endregion
 

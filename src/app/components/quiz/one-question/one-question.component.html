@@ -1,4 +1,141 @@
-<mat-radio-group aria-label="Select an option">
-  <mat-radio-button value="1">Option 1</mat-radio-button>
-  <mat-radio-button value="2">Option 2</mat-radio-button>
-</mat-radio-group>
+<mat-stepper labelPosition="bottom" #stepper>
+
+  <mat-step [stepControl]="firstFormGroup">
+
+    <form [formGroup]="firstFormGroup">
+
+      <ng-template matStepLabel> Kategorie Restmüll </ng-template>
+
+      <p> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1" id="true"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2" id="false"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3" id="false"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht eine weitere Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht noch eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht die letzte Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <div>
+        <button mat-button id="result"> Lösung anzeigen </button>
+      </div>
+
+      <div>
+        <button mat-button matStepperNext> Weiter </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+
+    <form [formGroup]="secondFormGroup">
+
+      <ng-template matStepLabel> Kategorie Testmüll </ng-template>
+
+      <p> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht eine weitere Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht noch eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht die letzte Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <div>
+        <button mat-button id="result"> Lösung anzeigen </button>
+      </div>
+
+      <div>
+        <button mat-button matStepperNext> Weiter </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+  <mat-step [stepControl]="thirdFormGroup">
+
+    <form [formGroup]="thirdFormGroup">
+
+      <ng-template matStepLabel> Kategorie Papiermüll </ng-template>
+
+      <p> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht eine weitere Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht noch eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <p> Hier steht die letzte Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1"> Option 1 </mat-radio-button>
+        <mat-radio-button value="2"> Option 2 </mat-radio-button>
+        <mat-radio-button value="3"> Option 3 </mat-radio-button>
+      </mat-radio-group>
+
+      <div>
+        <button mat-button id="result"> Lösung anzeigen </button>
+      </div>
+
+      <div>
+        <button mat-button matStepperNext> Fertig </button>
+      </div>
+
+    </form>
+
+  </mat-step>
+
+</mat-stepper>
