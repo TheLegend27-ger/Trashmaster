@@ -9,6 +9,7 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
 import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
 import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
+import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'data', component: DataUploaderComponent },
   { path: 'edittip/:tipId', component: DataUploaderTipsEditorComponent },
   { path: 'edittip', component: DataUploaderTipsEditorComponent },
+  { path: 'editquestion', component: DataUploaderQuestionsEditorComponent },
+  { path: 'editquestion/:questionId', component: DataUploaderQuestionsEditorComponent },
   { path: 'questionnaire', component: QuestionnaireComponent },
   { path: 'quiz', component: OneQuestionComponent },
 ];

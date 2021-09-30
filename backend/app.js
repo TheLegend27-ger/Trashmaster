@@ -40,7 +40,7 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
 
 
 //Nutzung der Schemata und export des gesamten app Moduls
-app.use(questionRoutes)
+app.use("/api/questions",questionRoutes)
 app.use("/api/tips",tipRoutes)
 
 module.exports = app;
