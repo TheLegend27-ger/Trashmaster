@@ -26,6 +26,7 @@ import { OneQuestionComponent } from './components/quiz/one-question/one-questio
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { Category2Component } from './components/tips/all-tips/category2/category2.component';
 import { Category3Component } from './components/tips/all-tips/category3/category3.component';
+import { RandomTipComponent } from './components/tips/random-tip/random-tip.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { Category3Component } from './components/tips/all-tips/category3/categor
     OneQuestionComponent,
     Category1Component,
     Category2Component,
-    Category3Component
+    Category3Component,
+    RandomTipComponent
   ],
   imports: [
     BrowserModule,
