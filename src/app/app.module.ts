@@ -26,6 +26,8 @@ import { OneQuestionComponent } from './components/quiz/one-question/one-questio
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { Category2Component } from './components/tips/all-tips/category2/category2.component';
 import { Category3Component } from './components/tips/all-tips/category3/category3.component';
+import { Category4Component } from './components/tips/all-tips/category4/category4.component';
+import { Category5Component } from './components/tips/all-tips/category5/category5.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { Category3Component } from './components/tips/all-tips/category3/categor
     OneQuestionComponent,
     Category1Component,
     Category2Component,
-    Category3Component
+    Category3Component,
+    Category4Component,
+    Category5Component
   ],
   imports: [
     BrowserModule,
