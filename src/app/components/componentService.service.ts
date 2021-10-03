@@ -14,6 +14,9 @@ import { QuestionData } from '../models/question.model';
 
 @Injectable({providedIn: 'root'})
 export class componentService{
+  findQuestionnaireAnswer(myFormAnswsers: any[]) {
+    throw new Error('Method not implemented.');
+  }
 
 
 
