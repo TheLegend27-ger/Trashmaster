@@ -53,6 +53,7 @@ export class componentService{
             id: tip._id,
             Title: tip.Title,
             Text: tip.Text,
+            TipType: tip.TipType,
             ImageBase64: tip.ImageBase64
           }
         })
@@ -63,8 +64,9 @@ export class componentService{
         console.log(transformedTips)
       });
   }
+
   getRandomTip(){
-    return this.tips[0]
+    return this.tips[Math.floor(Math.random() * this.tips.length)]
   }
   deletetip(tipId: any) {
     this.http.delete('http://localhost:3000/api/tips/' + tipId)
@@ -76,7 +78,7 @@ export class componentService{
     });
   }
   getSingleTip (tipId: any){
-    return this.http.get<{ _id: string, Title: string, Text: string, ImageBase64: string }>(
+    return this.http.get<{ _id: string, Title: string, Text: string, TipType: string; ImageBase64: string }>(
       "http://localhost:3000/api/tips/" + tipId
     );
   }
@@ -85,6 +87,7 @@ export class componentService{
       id: tip.id,
       Title: tip.Title,
       Text: tip.Text,
+      TipType: tip.TipType,
       ImageBase64: tip.ImageBase64
     }
     console.log(id)
