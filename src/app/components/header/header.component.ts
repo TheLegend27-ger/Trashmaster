@@ -1,6 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
 import { Router } from '@angular/router';
+import { TipData } from 'src/app/models/tip.model';
+import { Subscription } from 'rxjs';
+import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,8 +18,23 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(public componentService: componentService, public router: Router) { }
 
+  @Input() tips: TipData[] = [];
+  dataSource!: MatTableDataSource<TipData>
+  private tipsSub: Subscription = new Subscription();
   //#region ngOnInit
   ngOnInit(): void {
+    this.componentService.getTips();
+    this.tipsSub = this.componentService
+      .getTipsUpdateListener()
+      .subscribe((tips: TipData[]) => {
+        this.tips = tips;
+        this.dataSource = new MatTableDataSource(this.tips);
+        //this.dataSource.paginator = this.paginator;
+        //this.dataSource.sort = this.sort;
+        setTimeout(() => {
+          //this.isLoading = false;
+        }, 1);
+      });
   }
   //#endregion
 
@@ -63,9 +81,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   //#endregion
 
   applyFilter(event: Event) {
-    //const filterValue = (event.target as HTMLInputElement).value;
-    //this.dataSource.filter = filterValue.trim().toLowerCase();
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
 
 }
 

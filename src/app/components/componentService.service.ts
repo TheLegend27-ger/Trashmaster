@@ -48,6 +48,7 @@ export class componentService{
   private tips: TipData[] =[];
 
   getTips(){
+    console.log("gettips")
     this.http
       .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
       .pipe(map((tipData:any) => {

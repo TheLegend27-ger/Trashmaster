@@ -40,6 +40,9 @@ export class QuestionnaireComponent implements OnInit, OnDestroy {
     if (this.form.invalid) {
       console.log("invalid")
       console.log(document.getElementsByClassName('ng-invalid'))
+      //for (let i = 0; i < document.getElementsByClassName('ng-invalid').length; i++){
+      //  document.getElementsByClassName('ng-invalid').item(i)?.classList.add('invalid')
+      //}
       return;
     }
     if (this.form.valid) {
