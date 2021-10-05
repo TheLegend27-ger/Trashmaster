@@ -10,7 +10,7 @@ import { componentService } from '../../componentService.service';
 })
 export class OneTipComponent implements OnInit {
   title  = 3;
-  constructor(public componentService: componentService, public route: ActivatedRoute) {}
+  constructor(public componentService: componentService, public route: ActivatedRoute, public router:Router) {}
   private mode = "alltips";
   private tipType: any;
   tip: TipData={

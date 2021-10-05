@@ -9,7 +9,7 @@ import { componentService } from '../../../componentService.service';
 export class Category1Component implements OnInit {
 
 
-  constructor(public componentService: componentService, private router:Router ) { }
+  constructor(public componentService: componentService, public router:Router ) { }
 
   ngOnInit(): void {
     this.componentService.getTips();

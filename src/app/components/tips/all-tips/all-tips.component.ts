@@ -10,7 +10,7 @@ import { componentService } from '../../componentService.service';
 })
 export class AllTipsComponent implements OnInit, OnDestroy {
 
-  constructor(public componentService: componentService, private router:Router) { }
+  constructor(public componentService: componentService, public router:Router) { }
 
   //#region ngOnInit
   ngOnInit(): void {

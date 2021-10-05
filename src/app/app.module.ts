@@ -5,7 +5,8 @@ import {MaterialModule} from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { Category1Component } from './components/tips/all-tips/category1/categor
 import { RandomTipComponent } from './components/tips/random-tip/random-tip.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { RandomTipComponent } from './components/tips/random-tip/random-tip.comp
     OneQuestionComponent,
     Category1Component,
     RandomTipComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,8 @@ import { RandomTipComponent } from './components/tips/random-tip/random-tip.comp
     HttpClientModule,
     ReactiveFormsModule,
     MaterialModule,
+    MatGridListModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
