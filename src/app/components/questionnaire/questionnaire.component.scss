@@ -15,29 +15,57 @@
 }
 
 .example-container .mat-radio-button {
-  margin: 0 12px;
+  margin: 0 1rem;
 }
 
 .qst {
-  background-color: #b36bff;
   border-radius: 10px;
   margin-top: 1rem;
   height: 5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .qst-title {
   color: white;
   text-transform: uppercase;
-  margin-top: 2rem;
-  margin-left: 2rem;
   font-size: 30px;
 }
 
+.qst-button{
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #b36bff;
+  height: 3rem;
+  width: 25rem;
+}
+
 .frage{
-  background-color: #3cc800;
+  background-color: #8d8d8d;
   border-radius: 10px;
   margin-top: 2rem;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.frage-title{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.frage-subtitle{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.frage-radio{
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mat-card-title{
@@ -53,6 +81,8 @@
   border-radius: 10px;
   margin-top: 1rem;
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .save-button{
@@ -61,4 +91,16 @@
   border-radius: 10px;
   font-size: 20px;
   color: white;
+}
+
+.card{
+  background-color: #4e4e4e;
+  border-radius: 10px;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  align-items: center;
+}
+
+.mat-radio-container{
+  background-color: brown;
 }
