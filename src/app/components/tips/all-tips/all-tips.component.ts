@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { componentService } from '../../componentService.service';
 
@@ -9,7 +10,7 @@ import { componentService } from '../../componentService.service';
 })
 export class AllTipsComponent implements OnInit, OnDestroy {
 
-  constructor(public componentService: componentService) { }
+  constructor(public componentService: componentService, private router:Router) { }
 
   //#region ngOnInit
   ngOnInit(): void {

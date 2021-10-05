@@ -14,6 +14,8 @@ import { QuestionData } from '../models/question.model';
 
 @Injectable({providedIn: 'root'})
 export class componentService{
+
+
   findQuestionnaireAnswer(myFormAnswsers: any[]) {
     throw new Error('Method not implemented.');
   }
@@ -46,7 +48,8 @@ export class componentService{
   private tipsUpdated = new Subject<TipData[]>();
   //Lokale Instanz der Tips
   private tips: TipData[] =[];
-
+  private categoryTips: TipData[] =[];
+  private tempTip!: TipData;
   getTips(){
     console.log("gettips")
     this.http
@@ -65,12 +68,37 @@ export class componentService{
       .subscribe((transformedTips) => {
         this.tips = transformedTips;
         this.tipsUpdated.next([...this.tips])
-        console.log(transformedTips)
+        //console.log(transformedTips)
       });
   }
 
   getRandomTip(){
     return this.tips[Math.floor(Math.random() * this.tips.length)]
+  }
+  setCategoryTips() {
+    this.categoryTips = [...this.tips]
+  }
+  getSingleTipByCategory(tipType: any) {
+    console.log(tipType)
+    let escape = false
+    for ( let i = 0 ; i < this.categoryTips.length; i++){
+      if (this.categoryTips[i].TipType === tipType){
+        console.log("penis")
+        this.tempTip = this.categoryTips[i]
+        this.categoryTips.splice(i ,1);
+        escape = true;
+      }
+      if (escape == true){
+        return this.tempTip
+      }
+    }
+    return{
+      id: "Empty",
+      Title: "Empty",
+      Text: "Empty",
+      TipType: "Empty",
+      ImageBase64: "Empty"
+    }
   }
   deletetip(tipId: any) {
     this.http.delete('http://localhost:3000/api/tips/' + tipId)

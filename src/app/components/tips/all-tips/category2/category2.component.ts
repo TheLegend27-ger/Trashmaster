@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { componentService } from '../../../componentService.service';
 @Component({
   selector: 'app-category2',
   templateUrl: './category2.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Category2Component implements OnInit {
 
-  constructor() { }
+  constructor(public componentService: componentService, private router:Router ) { }
 
   ngOnInit(): void {
+    this.componentService.getTips();
+    this.componentService.setCategoryTips();
+    this.router.navigate(["/alltips/category2"])
+  }
+  ngAfterViewChecked(){
+
   }
 
 }
