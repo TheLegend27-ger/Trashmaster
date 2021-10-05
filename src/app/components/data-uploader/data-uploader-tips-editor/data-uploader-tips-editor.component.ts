@@ -25,6 +25,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
     id: '',
     Title: '',
     Text: '',
+    TipType: '',
     ImageBase64: ''
   }
 
@@ -51,6 +52,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
             id: TipData._id,
             Title: TipData.Title,
             Text: TipData.Text,
+            TipType: TipData.TipType,
             ImageBase64: TipData.ImageBase64
           };
           this.form.setValue({
@@ -85,6 +87,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         id: '',
         Title: this.form.value.Title,
         Text: this.form.value.Text,
+        TipType: this.form.value.TipType,
         ImageBase64: this.tip.ImageBase64
       }
       console.log("tipütosave   " + tipToSave)
@@ -94,6 +97,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         id: this.tipId,
         Title: this.form.value.Title,
         Text: this.form.value.Text,
+        TipType: this.form.value.TipType,
         ImageBase64: this.tip.ImageBase64
       }
       this.componentService.updateTip(tipToSave.id, tipToSave);

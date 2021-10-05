@@ -16,6 +16,15 @@
       <textarea matInput rows="4" formControlName="Text" placeholder="Tip Text"></textarea>
       <mat-error *ngIf="form.get('Text')">Please enter a Text.</mat-error>
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select the TipType</mat-label>
+      <mat-select formControlName="TipType">
+        <mat-option value="Type1">Type1</mat-option>
+        <mat-option value="Type2">Type2</mat-option>
+        <mat-option value="Type3">Type3</mat-option>
+        <mat-option value="Type4">Type4</mat-option>
+      </mat-select>
+    </mat-form-field>
     <img src="{{'data:image/jpg;base64,' + tip.ImageBase64}}" />
     <button mat-raised-button color="accent" type="submit">Save Tip</button>
   </form>

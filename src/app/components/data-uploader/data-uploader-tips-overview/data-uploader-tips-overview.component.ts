@@ -36,6 +36,7 @@ export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
     'Title',
     'Text',
     'ImageNumber',
+    'TipType',
     'Delete',
     'Edit',
   ];

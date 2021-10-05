@@ -26,8 +26,12 @@ import { OneQuestionComponent } from './components/quiz/one-question/one-questio
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { Category2Component } from './components/tips/all-tips/category2/category2.component';
 import { Category3Component } from './components/tips/all-tips/category3/category3.component';
+<<<<<<< HEAD
 import { Category4Component } from './components/tips/all-tips/category4/category4.component';
 import { Category5Component } from './components/tips/all-tips/category5/category5.component';
+=======
+import { RandomTipComponent } from './components/tips/random-tip/random-tip.component';
+>>>>>>> 2972260b2855d941e2c56966ea52761432b85af9
 
 @NgModule({
   declarations: [
@@ -49,8 +53,12 @@ import { Category5Component } from './components/tips/all-tips/category5/categor
     Category1Component,
     Category2Component,
     Category3Component,
+<<<<<<< HEAD
     Category4Component,
     Category5Component
+=======
+    RandomTipComponent
+>>>>>>> 2972260b2855d941e2c56966ea52761432b85af9
   ],
   imports: [
     BrowserModule,

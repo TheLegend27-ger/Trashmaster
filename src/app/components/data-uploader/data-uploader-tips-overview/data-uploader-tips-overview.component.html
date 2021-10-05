@@ -32,6 +32,10 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header > Text</th>
       <td mat-cell *matCellDef="let element"> {{element.Text}} </td>
     </ng-container>
+    <ng-container matColumnDef="TipType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header > Text</th>
+      <td mat-cell *matCellDef="let element"> {{element.TipType}} </td>
+    </ng-container>
 
     <!-- ImageNumber -->
     <ng-container matColumnDef="ImageNumber">
