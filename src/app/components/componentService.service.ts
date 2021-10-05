@@ -49,6 +49,7 @@ export class componentService{
   //Lokale Instanz der Tips
   private tips: TipData[] =[];
   private categoryTips: TipData[] =[];
+  private directReturn = false;
   private tempTip!: TipData;
   getTips(){
     console.log("gettips")
@@ -77,10 +78,20 @@ export class componentService{
   }
   setCategoryTips() {
     this.categoryTips = [...this.tips]
+    this. directReturn = false;
   }
   getSingleTipByCategory(tipType: any) {
-    console.log(tipType)
     let escape = false
+    console.log(tipType)
+    if (this.directReturn){
+      return{
+        id: "Empty",
+        Title: "Empty",
+        Text: "Empty",
+        TipType: "Empty",
+        ImageBase64: "Empty"
+      }
+    }
     for ( let i = 0 ; i < this.categoryTips.length; i++){
       if (this.categoryTips[i].TipType === tipType){
         console.log("penis")
@@ -91,6 +102,9 @@ export class componentService{
       if (escape == true){
         return this.tempTip
       }
+    }
+    if (escape == false){
+      this.directReturn = true
     }
     return{
       id: "Empty",
