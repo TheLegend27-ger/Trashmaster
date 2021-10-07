@@ -37,6 +37,7 @@ router.delete('/:id', (request, response, next) => {
     const tip = new TipData({
       Title: request.body.Title,
       Text: request.body.Text,
+      TipType: request.body.TipType,
       ImageBase64: request.body.ImageBase64,
     });
     tip.save().then(result =>{
@@ -53,6 +54,7 @@ router.delete('/:id', (request, response, next) => {
       _id: request.params.id,
       Title: request.body.Title,
       Text: request.body.Text,
+      TipType: request.body.TipType,
       ImageBase64: request.body.ImageBase64,
     });
     TipData.updateOne({_id: request.params.id}, tip).then(result =>{

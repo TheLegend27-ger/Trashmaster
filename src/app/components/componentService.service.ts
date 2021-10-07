@@ -3,7 +3,6 @@ import {Injectable} from '@angular/core'
 import {HttpClient} from "@angular/common/http";
 import {Subject} from 'rxjs';
 import {map} from 'rxjs/operators'
-//import { element } from 'protractor';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { TipData } from '../models/tip.model';
@@ -15,32 +14,25 @@ import { QuestionData } from '../models/question.model';
 @Injectable({providedIn: 'root'})
 export class componentService{
 
-
-  findQuestionnaireAnswer(myFormAnswsers: any[]) {
-    throw new Error('Method not implemented.');
-  }
+  constructor(private http: HttpClient, private router:Router){}
 
 
 
+  //#region UpdateListeners
   getTipsUpdateListener() {
    return this.tipsUpdated.asObservable();
   }
   getQuestionsUpdateListener() {
     return this.questionsUpdated.asObservable();
    }
-
-
-  constructor(private http: HttpClient, private router:Router){}
-
-  //#region Example
-
-
-
   //#endregion
 
   //#region User Navigation
   navigateToRoot(){
     this.router.navigate(["/"])
+  }
+  navigateToDataUploader() {
+    this.router.navigate(["/data"])
   }
   //#endregion
 
@@ -48,9 +40,13 @@ export class componentService{
   private tipsUpdated = new Subject<TipData[]>();
   //Lokale Instanz der Tips
   private tips: TipData[] =[];
+  //Temporäre Instanz der Tips (editierbar)
   private categoryTips: TipData[] =[];
+  //return checker
   private directReturn = false;
+  //Temporärer Tip
   private tempTip!: TipData;
+
   getTips(){
     console.log("gettips")
     this.http
@@ -72,10 +68,11 @@ export class componentService{
         //console.log(transformedTips)
       });
   }
-
+  //Rückgabe eines zufälligen Tipps aller bestehenden Tipps
   getRandomTip(){
     return this.tips[Math.floor(Math.random() * this.tips.length)]
   }
+  //Initialisieren der categoryTips und reset der directReturn Variable
   setCategoryTips() {
     this.categoryTips = [...this.tips]
     this. directReturn = false;
@@ -94,7 +91,7 @@ export class componentService{
     }
     for ( let i = 0 ; i < this.categoryTips.length; i++){
       if (this.categoryTips[i].TipType === tipType){
-        console.log("penis")
+        console.log("check-here")
         this.tempTip = this.categoryTips[i]
         this.categoryTips.splice(i ,1);
         escape = true;
@@ -114,6 +111,7 @@ export class componentService{
       ImageBase64: "Empty"
     }
   }
+  //Löschung eines Tipps anhand der ID
   deletetip(tipId: any) {
     this.http.delete('http://localhost:3000/api/tips/' + tipId)
     .subscribe(() =>{
@@ -123,11 +121,13 @@ export class componentService{
       console.log('Deleted!')
     });
   }
+  //Abrufen eines Tipps anhand der ID
   getSingleTip (tipId: any){
     return this.http.get<{ _id: string, Title: string, Text: string, TipType: string; ImageBase64: string }>(
       "http://localhost:3000/api/tips/" + tipId
     );
   }
+  //Aktualisierung eines Tipps anhand der ID und mit Payload
   updateTip(id:any ,tip: TipData){
     const tipToUpdate: TipData={
       id: tip.id,
@@ -140,16 +140,17 @@ export class componentService{
     this.http.put('http://localhost:3000/api/tips/' + id , tipToUpdate)
       .subscribe(response => {
         console.log(response)
-        //this.navigateToRoot();
+        this.navigateToDataUploader();
       });
   }
+  //Hinzufügen eines neuen Tipp zur Datenbank
   addTip(tip: TipData){
     console.log(tip)
     this.http.post<{message: string}>('http://localhost:3000/api/tips/', tip)
       .subscribe((responseData) =>{
         this.tips.push(tip);
         this.tipsUpdated.next([...this.tips]);
-        this.navigateToRoot();
+        this.navigateToDataUploader();
       });
   }
   //#endregion
@@ -186,15 +187,16 @@ export class componentService{
       });
   }
 
-
+  //Aktualisierung der Fragen anhand von ID und mit Payload
   updateQuestion(id: any, question: QuestionData) {
     console.log("updateQuestion")
     this.http.put('http://localhost:3000/api/questions/' + id , question)
       .subscribe(response => {
         console.log(response)
-        //this.navigateToRoot();
+        this.navigateToDataUploader();
       });
   }
+  //Hinzufügen einer Frage
   addQuestion(question: QuestionData) {
     console.log("addQuestion")
     console.log(question)
@@ -202,16 +204,17 @@ export class componentService{
       .subscribe((responseData) =>{
         this.questions.push(question);
         this.questionsUpdated.next([...this.questions]);
-        this.navigateToRoot();
+        this.navigateToDataUploader();
       });
   }
-
+  //Abrufen einer Frage anhand der ID
   getSingleQuestion(questionId: any){
     console.log("getSingleQuestion")
     return this.http.get<{ _id: string, Title: string, Question: string, Answer1: string, Answer2: string, Answer3: string, Answer4: string,  Answer: string, QuestionType: string }>(
       "http://localhost:3000/api/questions/" + questionId
     );
   }
+  //Löschen einer Frage anhand der ID
   deletequestion(questionId: any) {
     console.log("deletequestion")
     this.http.delete('http://localhost:3000/api/questions/' + questionId)
@@ -222,8 +225,14 @@ export class componentService{
       console.log('Deleted!')
     });
   }
+  //#endregion
 
+  //#region Questionnaire
+  findQuestionnaireAnswer(myFormAnswsers: any[]) {
+    throw new Error('Method not implemented.');
+  }
+  //#endregion
 }
 
-  //#endregion
+
 

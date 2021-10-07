@@ -40,6 +40,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         validators: [Validators.required, Validators.minLength(3)]
       }),
       Text: new FormControl(null, { validators: [Validators.required] }),
+      TipType: new FormControl('category1', { validators: [Validators.required] }),
     });
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has("tipId")) {
@@ -58,6 +59,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
           this.form.setValue({
             Title: this.tip.Title,
             Text: this.tip.Text,
+            TipType: this.tip.TipType
           });
         });
       } else {
@@ -90,7 +92,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         TipType: this.form.value.TipType,
         ImageBase64: this.tip.ImageBase64
       }
-      console.log("tipütosave   " + tipToSave)
+      console.log("tiptosave   " + tipToSave)
       this.componentService.addTip(tipToSave);
     } else {
       let tipToSave: TipData = {
@@ -100,9 +102,11 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         TipType: this.form.value.TipType,
         ImageBase64: this.tip.ImageBase64
       }
+      console.log(this.form.value.TipType)
       this.componentService.updateTip(tipToSave.id, tipToSave);
       console.log(tipToSave)
     }
+
     this.form.reset();
   }
 

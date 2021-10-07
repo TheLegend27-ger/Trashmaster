@@ -1,38 +1,30 @@
 
-
-<mat-toolbar color="primary">
-
-  <mat-toolbar-row>
-
-    <a [routerLink]="['/']" ><img class="logo" src='../../../assets/images/Logo.png' /></a>
-
-    <div mat-grid-list>
-    <button mat-flat-button	(click)="button_color_change('1')" [class.myClass]="isClicked1" (click)="router.navigate(['/alltips'])">
-      <p>alltips</p>
-    </button>
-    <button mat-flat-button	(click)="button_color_change('2')" [class.myClass]="isClicked2" (click)="router.navigate(['/questionnaire'])">
-      <p>questionnaire</p>
-    </button>
-    <button mat-flat-button	(click)="button_color_change('3')" [class.myClass]="isClicked3" (click)="router.navigate(['/quiz'])">
-      <p>quiz</p>
-    </button>
-    <button mat-flat-button	(click)="button_color_change('4')" [class.myClass]="isClicked4" (click)="router.navigate(['/data'])">
-      <p>data uploader</p>
-    </button>
-    </div>
-
-    <span class="example-spacer"></span>
-
-
-    <mat-icon class="searchIcon" matPrefix>search</mat-icon>
-    <mat-form-field floatLabel="never" class="searchbar">
-      <input #searchInput matInput (keyup)="applyFilter($event)" placeholder="Suche ...">
-    </mat-form-field>
-
-
-  </mat-toolbar-row>
-</mat-toolbar>
-
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <a [routerLink]="['/']" ><img class="logo" src='../../../assets/images/Logo.png' /></a>
+      <div mat-grid-list>
+      <button mat-flat-button	(click)="button_color_change('1')" [class.myClass]="isClicked1" (click)="router.navigate(['/alltips'])">
+        <p>alltips</p>
+      </button>
+      <button mat-flat-button	(click)="button_color_change('2')" [class.myClass]="isClicked2" (click)="router.navigate(['/questionnaire'])">
+        <p>questionnaire</p>
+      </button>
+      <button mat-flat-button	(click)="button_color_change('3')" [class.myClass]="isClicked3" (click)="router.navigate(['/quiz'])">
+        <p>quiz</p>
+      </button>
+      <button mat-flat-button	(click)="button_color_change('4')" [class.myClass]="isClicked4" (click)="router.navigate(['/data'])">
+        <p>data uploader</p>
+      </button>
+      </div>
+      <span class="example-spacer"></span>
+      <mat-icon class="searchIcon" matPrefix>search</mat-icon>
+      <mat-form-field floatLabel="never" class="searchbar">
+        <input #searchInput matInput (keyup)="applyFilter($event)" placeholder="Suche ...">
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
 
 
 

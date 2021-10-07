@@ -9,7 +9,7 @@ const questionDataSchema = mongoose.Schema({
   Answer3: { type: String},
   Answer4: { type: String},
   Answer: { type: String},
-  TipType: { type: String}
+  QuestionType: { type: String}
 });
 
 module.exports = mongoose.model('questionData', questionDataSchema);

@@ -4,7 +4,6 @@ import {
   OnDestroy,
   OnInit,
   ViewChild,
-  NgModule,
 } from '@angular/core';
 import { TipData } from 'src/app/models/tip.model';
 import { MatPaginator } from '@angular/material/paginator';
@@ -24,10 +23,7 @@ import { componentService } from '../../componentService.service';
   styleUrls: ['./data-uploader-tips-overview.component.scss'],
 })
 export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
-  constructor(
-    public componentService: componentService,
-    public dialog: MatDialog
-  ) {}
+  constructor(public componentService: componentService,public dialog: MatDialog) {}
   @Input() tips: TipData[] = [];
   @ViewChild(MatSort, { static: true }) sort: MatSort = new MatSort();
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
@@ -35,7 +31,7 @@ export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = [
     'Title',
     'Text',
-    'ImageNumber',
+    'ImageBase64',
     'TipType',
     'Delete',
     'Edit',
@@ -63,23 +59,27 @@ export class DataUploaderTipsOverviewComponent implements OnInit, OnDestroy {
     this.isLoading = true;
     this.tipsSub.unsubscribe();
   }
+  //Löschen eines einzelnen Tipps anhand der ID
   onDelete(tipId: any) {
     this.componentService.deletetip(tipId);
   }
+
   onOpenEditForm(tip: TipData) {
     console.log(tip);
   }
-  openConfirmDialog(tipId: any) {
 
-    const title = 'Confirm deletion progress';
-    const message =
-      'Are you sure you want to delete ?';
-    this.confirmDeleteDialog(title, message, tipId);
-  }
+  //Filtern der Datensätze nach der Eingabe im Suchfeld
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+  //Öffnen des Bestätigungsdialogs
+  openConfirmDialog(tipId: any) {
+    const title = 'Confirm deletion progress';
+    const message = 'Are you sure you want to delete ?';
+    this.confirmDeleteDialog(title, message, tipId);
+  }
+  //Handling des Bestätigungsdialogs
   confirmDeleteDialog(title: string, message: string, tipId: any) {
     const dialogData = new ConfirmDialogModel(title, message);
     let result = false;

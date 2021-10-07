@@ -88,7 +88,7 @@ export class DataUploaderQuestionsEditorComponent implements OnInit {
             Answer3: this.question.Answer3,
             Answer4: this.question.Answer4,
             Answer: this.question.Answer,
-            QuestionType: QuestionData.QuestionType
+            QuestionType: this.question.QuestionType,
           });
         });
       } else {
