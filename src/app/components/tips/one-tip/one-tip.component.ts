@@ -16,7 +16,7 @@ export class OneTipComponent implements OnInit {
   tip: TipData={
     id: '',
     Title: '',
-    Text: 'Lurch',
+    Text: '',
     TipType: '',
     ImageBase64: ''
   }
