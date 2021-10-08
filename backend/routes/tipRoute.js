@@ -6,7 +6,7 @@ const TipData = require('../models/tipModel')
 
 //#region get questions
 router.get('', (request, response, next) => {
-  TipData.find().sort([['Title', 1]]).then(documents => {
+  TipData.find().then(documents => {
     response.status(200).json({
       message: 'tips fetched sucessfully',
       tips: documents
