@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   //#region ngOnDestroy
   ngOnDestroy(){
-
+    this.tipsSub.unsubscribe()
   }
 
   button_color_change(id:any){

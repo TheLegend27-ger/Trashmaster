@@ -47,6 +47,8 @@ export class componentService{
   //Temporärer Tip
   private tempTip!: TipData;
 
+
+
   getTips(){
     console.log("gettips")
     this.http
@@ -64,22 +66,22 @@ export class componentService{
       }))
       .subscribe((transformedTips) => {
         this.tips = transformedTips;
+        //this.setTipIds([...this.tips]);
+        //console.log(this.tipIds)
         this.tipsUpdated.next([...this.tips])
         //console.log(transformedTips)
       });
   }
   //Rückgabe eines zufälligen Tipps aller bestehenden Tipps
-  getRandomTip(){
-    return this.tips[Math.floor(Math.random() * this.tips.length)]
-  }
   //Initialisieren der categoryTips und reset der directReturn Variable
   setCategoryTips() {
+    console.log("setCategoryTips")
     this.categoryTips = [...this.tips]
+    console.log(this.categoryTips)
     this. directReturn = false;
   }
   getSingleTipByCategory(tipType: any) {
     let escape = false
-    console.log(tipType)
     if (this.directReturn){
       return{
         id: "Empty",

@@ -27,7 +27,7 @@ const tipRoutes = require('./routes/tipRoute');
 
 //#region Database connection
 //Verbindung mit der lokalen MongoDB
-const mongoURI ='mongodb+srv://Trashmaster_standardUser:JlxOlswzSfHpOL5f@clustersweteam1.9dhpv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongoURI ='mongodb+srv://Trashmaster_standardUser:6FRiuNLriappOB9C@clustersweteam1.9dhpv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(()=>{
     console.log('connected to database!')

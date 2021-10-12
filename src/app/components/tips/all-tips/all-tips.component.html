@@ -1,18 +1,24 @@
 <div class="container">
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/category1'])">
-    <p>Bio</p>
+  <button class="btn btn-center" [routerLink]="['/alltips', 'allgemein']">
+    <p>allgemein</p>
   </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/category1'])">
-    <p>Chemikalien</p>
+  <button class="btn btn-center"	(click)="router.navigate(['/alltips/blau'])">
+    <p>blau</p>
   </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/category1'])">
-    <p>Stoffe</p>
+  <button class="btn btn-center"	(click)="router.navigate(['/alltips/gelb'])">
+    <p>gelb</p>
   </button>
-  <button class="btn btn-center" (click)="router.navigate(['/alltips/category1'])">
-    <p>Plastik</p>
+  <button class="btn btn-center" (click)="router.navigate(['/alltips/braun'])">
+    <p>braun</p>
   </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/category1'])">
-    <p>Metalle</p>
+  <button class="btn btn-center"	(click)="router.navigate(['/alltips/schwarz'])">
+    <p>schwarz</p>
+  </button>
+  <button class="btn btn-center"	(click)="router.navigate(['/alltips/glas'])">
+    <p>glas</p>
+  </button>
+  <button class="btn btn-center"	(click)="router.navigate(['/alltips/sondermuell'])">
+    <p>sondermuell</p>
   </button>
 </div>
 
