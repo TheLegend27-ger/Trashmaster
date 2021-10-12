@@ -35,6 +35,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
           //this.isLoading = false;
         }, 1);
       });
+
+      window.addEventListener("beforeunload", function(event) { event.returnValue = false });
+
+
   }
   //#endregion
 

@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { TipData } from 'src/app/models/tip.model';
 import { componentService } from '../../componentService.service';
 
@@ -13,6 +14,8 @@ export class OneTipComponent implements OnInit {
   constructor(public componentService: componentService, public route: ActivatedRoute, public router:Router) {}
   private mode = "alltips";
   private tipType: any;
+  private showSub: Subscription = new Subscription();
+  public show!: Boolean;
   tip: TipData={
     id: 'LOST',
     Title: 'LOST',
@@ -22,8 +25,7 @@ export class OneTipComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-
+    this.showSub = this.componentService.getNgIfUpdateListener().subscribe((show:Boolean)=> this.show = show)
 
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (this.router.url.indexOf("/alltips/allgemein") > -1) {
@@ -45,12 +47,13 @@ export class OneTipComponent implements OnInit {
         this.tipType = "Empty"
       }
       console.log(this.tipType)
-      if (this.tipType !== "Empty") {
+      if (this.tipType != "Empty" && this.mode != "random") {
         this.tip = this.componentService.getSingleTipByCategory(this.tipType)
-        console.log(this.tip)
-        if (this.tip.id !== "Empty"){
-          //this.hidden = false;
-        }
+        console.log("show")
+        if (this.tip.TipType != "Empty"){this.componentService.showTip()}
+      }
+      if (this.mode == "random"){
+        this.show = true
       }
     });
   }

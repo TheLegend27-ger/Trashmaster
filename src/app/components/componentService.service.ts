@@ -25,6 +25,9 @@ export class componentService{
   getQuestionsUpdateListener() {
     return this.questionsUpdated.asObservable();
    }
+  getNgIfUpdateListener() {
+    return this.ngIfSubject.asObservable();
+   }
   //#endregion
 
   //#region User Navigation
@@ -46,10 +49,14 @@ export class componentService{
   private directReturn = false;
   //Temporärer Tip
   private tempTip!: TipData;
+  private ngIfSubject = new Subject<boolean>();
+  private ngIf = false;
 
+  showTip(){
+    this.ngIfSubject.next(true)
+  }
 
-
-  getTips(){
+  getTips(): void{
     console.log("gettips")
     this.http
       .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
