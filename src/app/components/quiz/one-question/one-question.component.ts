@@ -27,3 +27,7 @@ export class OneQuestionComponent implements OnInit {
     });
   }
 }
+
+/* function checkButtons() {
+  document.getElementById("true").checked = true;
+} */
