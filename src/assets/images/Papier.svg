@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Papier">
+    <path d="M121.526 0L163.192 36.2318L166.664 54.3478L187.497 65.2173L222.219 61.5941L246.524 65.2173L249.996 76.0869L222.219 126.811L236.108 159.42L236.108 210.145L187.497 221.014L149.303 250L118.054 239.13L59.0269 242.753L0 192.029L20.833 159.42L38.1939 155.797L31.2495 141.304L31.2495 86.9564L59.0269 36.2319L86.8043 36.2319L121.526 0Z" transform="translate(0 0.00021362305)" id="Triangle" fill="#AFAFAF" fill-rule="evenodd" stroke="none" />
+    <path d="M6.94434 0L55.5547 0L45.1382 25.3623L0 28.9855L6.94434 0Z" transform="translate(52.08252 36.232086)" id="Rectangle" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L59.0269 14.4927L27.7774 50.7246L0 0Z" transform="translate(52.08252 65.21756)" id="Triangle-2" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M34.6238 0L76.3878 36.2321L0 36.2321L34.6238 0Z" transform="translate(86.8042 0)" id="Triangle-3" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M52.0826 0L45.1382 25.3623L0 25.3623L52.0826 0Z" transform="translate(111.109375 54.348022)" id="Triangle-4" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 3.62318L31.2495 0L6.94434 14.4927L0 3.62318Z" transform="translate(190.96936 61.59433)" id="Triangle-5" fill="#7B7B7B" fill-rule="evenodd" stroke="none" />
+    <path d="M24.3052 3.62319L27.7774 14.4927L24.3052 21.7391L0 0L24.3052 3.62319Z" transform="translate(222.21887 61.59433)" id="Triangle-6" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M41.666 0L41.666 18.1159L0 14.4927L41.666 0Z" transform="translate(38.193848 115.94214)" id="Triangle-7" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M6.94434 0L48.6104 3.62318L0 10.8696L6.94434 0Z" transform="translate(31.249512 130.43484)" id="Triangle-8" fill="#BFBFBF" fill-rule="evenodd" stroke="none" />
+    <path d="M20.833 0L38.1939 28.9855L27.7774 36.2318L0 32.6087L20.833 0Z" transform="translate(0 159.42032)" id="Triangle-9" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M41.666 0L41.666 47.1014L0 43.4782L41.666 0Z" transform="matrix(1 0 0 -1 156.24768 123.18848)" id="Triangle-10" fill="#BFBFBF" fill-rule="evenodd" stroke="none" />
+    <path d="M12.1526 0L24.3052 14.4927L0 18.1159L12.1526 0Z" transform="matrix(1 0 0 -1 197.9137 141.30444)" id="Triangle-11" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M41.666 10.8696L48.6104 3.62318L55.5547 0L76.3877 0L62.4991 10.8696L59.0269 21.7391L48.6104 32.6087L0 36.2318L41.666 10.8696Z" transform="translate(38.193848 152.17392)" id="Triangle-12" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M27.7774 0L38.1939 47.1014L20.833 61.5941L0 32.6087L10.4165 21.7391L13.8887 10.8696L27.7774 0Z" transform="translate(86.8042 152.17392)" id="Triangle-13" fill="#BFBFBF" fill-rule="evenodd" stroke="none" />
+    <path d="M13.8887 0L38.1939 0L0 28.9855L13.8887 0Z" transform="translate(149.30334 221.0145)" id="Triangle-14" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M24.3052 14.4927L27.7774 7.24637L41.666 0L52.0826 14.4927L55.5547 21.7391L59.0269 36.2319L0 39.855L24.3052 14.4927Z" transform="translate(59.026855 202.89859)" id="Triangle-15" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M48.6104 32.6087L48.6104 83.3333L0 94.2028L20.833 65.2173L34.7217 0L48.6104 32.6087Z" transform="translate(187.4972 126.811676)" id="Triangle-16" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M38.193 0L31.2487 32.6087L0 39.855L38.193 0Z" transform="translate(184.02502 126.811676)" id="Triangle-17" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L41.6661 21.7391L0 18.1159L0 0Z" transform="translate(79.85986 115.94214)" id="Triangle-18" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L86.8043 43.4782L10.4165 57.971L0 0Z" transform="translate(111.109375 79.7103)" id="Triangle-19" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M20.833 0L31.2495 32.6087L0 65.2173L20.833 0Z" transform="translate(124.99817 134.05807)" id="Triangle-20" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M6.94434 0L24.3052 14.4927L0 14.4927L6.94434 0Z" transform="translate(114.58154 137.68124)" id="Triangle-21" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M41.666 0L41.666 28.9855L0 21.7391L41.666 0Z" transform="translate(38.193848 134.05807)" id="Triangle-22" fill="#BFBFBF" fill-rule="evenodd" stroke="none" />
+    <path d="M38.1939 0L45.1382 54.3478L0 72.4637L38.1939 0Z" transform="translate(118.05298 166.66672)" id="Triangle-23" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M20.833 0L45.1382 25.3623L0 54.3478L20.833 0Z" transform="translate(163.19202 166.66672)" id="Triangle-24" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M41.666 0L27.7774 43.4782L0 43.4782L41.666 0Z" transform="translate(156.24768 123.18848)" id="Triangle-25" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M13.8887 0L59.0269 18.1159L0 32.6087L13.8887 0Z" transform="matrix(1 0 0 -1 27.777344 228.2609)" id="Triangle-26" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M27.7774 0L27.7774 50.7246L0 32.6087L27.7774 0Z" transform="translate(208.3302 159.42032)" id="Triangle-27" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M20.833 0L6.94434 65.2173L0 21.7391L20.833 0Z" transform="translate(31.249512 65.21756)" id="Triangle-28" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M24.3052 0L38.1947 39.855L0 61.5941L24.3052 0Z" transform="translate(197.91284 61.59433)" id="Triangle-29" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
