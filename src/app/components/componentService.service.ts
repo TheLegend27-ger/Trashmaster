@@ -25,6 +25,9 @@ export class componentService{
   getQuestionsUpdateListener() {
     return this.questionsUpdated.asObservable();
    }
+  getNgIfUpdateListener() {
+    return this.ngIfSubject.asObservable();
+   }
   //#endregion
 
   //#region User Navigation
@@ -46,8 +49,14 @@ export class componentService{
   private directReturn = false;
   //Temporärer Tip
   private tempTip!: TipData;
+  private ngIfSubject = new Subject<boolean>();
+  private ngIf = false;
 
-  getTips(){
+  showTip(){
+    this.ngIfSubject.next(true)
+  }
+
+  getTips(): void{
     console.log("gettips")
     this.http
       .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
@@ -64,22 +73,22 @@ export class componentService{
       }))
       .subscribe((transformedTips) => {
         this.tips = transformedTips;
+        //this.setTipIds([...this.tips]);
+        //console.log(this.tipIds)
         this.tipsUpdated.next([...this.tips])
         //console.log(transformedTips)
       });
   }
   //Rückgabe eines zufälligen Tipps aller bestehenden Tipps
-  getRandomTip(){
-    return this.tips[Math.floor(Math.random() * this.tips.length)]
-  }
   //Initialisieren der categoryTips und reset der directReturn Variable
   setCategoryTips() {
+    console.log("setCategoryTips")
     this.categoryTips = [...this.tips]
+    console.log(this.categoryTips)
     this. directReturn = false;
   }
   getSingleTipByCategory(tipType: any) {
     let escape = false
-    console.log(tipType)
     if (this.directReturn){
       return{
         id: "Empty",

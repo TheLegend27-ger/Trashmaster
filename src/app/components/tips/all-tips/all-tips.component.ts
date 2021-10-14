@@ -23,4 +23,9 @@ export class AllTipsComponent implements OnInit, OnDestroy {
   }
   //#endregion
 
+  //#region Navigation
+  navigateToDestination(TipType:string){
+    this.router.navigate(['/alltips/' + TipType])
+  }
+  //#endregion
 }
