@@ -16,6 +16,7 @@ export class OneTipComponent implements OnInit {
   private tipType: any;
   private showSub: Subscription = new Subscription();
   public show!: Boolean;
+  public imgClass!: any;
   tip: TipData={
     id: 'LOST',
     Title: 'LOST',
@@ -46,6 +47,8 @@ export class OneTipComponent implements OnInit {
         this.mode = "random"
         this.tipType = "Empty"
       }
+      this.imgClass = this.tipType
+
       console.log(this.tipType)
       if (this.tipType != "Empty" && this.mode != "random") {
         this.tip = this.componentService.getSingleTipByCategory(this.tipType)

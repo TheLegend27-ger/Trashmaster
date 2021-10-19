@@ -5,13 +5,14 @@
   justify-content: center;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  height: 45%;
 }
-
 .btn{
   position: relative;
   background-color: #4e4e4e;
   color: white;
-  width: 10rem;
+  width: 100%;
+  height: 100%;
   margin-bottom: 2rem;
   padding: 1rem 0;
   border: none;
@@ -25,7 +26,6 @@
   cursor: pointer;
   margin: 1rem;
 }
-
 .btn::after{
   content: '';
   position: absolute;
@@ -36,17 +36,32 @@
   background: #3cc800;
 
 }
-
 .btn-center::after {
   transform: scale(0, 1);
 }
-
 .btn-center:hover::after{
   transform: scale(1, 1);
   transition: transform 0.3s ease;
 }
 
-mat-grid-tile {
-  background: #3cc800;
+.allgemein {
+  content: url(../../../../assets/images/Muellwagen.svg);
 }
-
+.blau {
+  content: url(../../../../assets/images/Blaue_Tonne.svg);
+}
+.gelb {
+  content: url(../../../../assets/images/Gelbe_Tonne.svg);
+}
+.braun {
+  content: url(../../../../assets/images/Braune_Tonne.svg);
+}
+.schwarz {
+  content: url(../../../../assets/images/Schwarze_Tonne.svg);
+}
+.glas {
+  content: url(../../../../assets/images/Glas.svg);
+}
+.sondermuell {
+  content: url(../../../../assets/images/Schaedel.svg);
+}

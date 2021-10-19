@@ -1,4 +1,9 @@
 <app-header></app-header>
-<mat-card>
-  <router-outlet></router-outlet>
-</mat-card>
+
+  <mat-card style="height: 93%;box-sizing: border-box;">
+    <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </mat-card>
+
+

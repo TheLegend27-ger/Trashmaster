@@ -1,25 +1,56 @@
 <div class="container">
-  <button class="btn btn-center" [routerLink]="['/alltips', 'allgemein']">
-    <p>allgemein</p>
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center "
+  [routerLink]="['/alltips', 'allgemein']">
+    <img class="allgemein"/><p>allgemein</p>
   </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/blau'])">
-    <p>blau</p>
+
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center"	(click)="router.navigate(['/alltips/blau'])">
+    <img class="blau"/><p>blau</p>
   </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/gelb'])">
-    <p>gelb</p>
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center"	(click)="router.navigate(['/alltips/gelb'])">
+    <img class="gelb"/><p>gelb</p>
   </button>
-  <button class="btn btn-center" (click)="router.navigate(['/alltips/braun'])">
-    <p>braun</p>
-  </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/schwarz'])">
-    <p>schwarz</p>
-  </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/glas'])">
-    <p>glas</p>
-  </button>
-  <button class="btn btn-center"	(click)="router.navigate(['/alltips/sondermuell'])">
-    <p>sondermuell</p>
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center" (click)="router.navigate(['/alltips/braun'])">
+    <img class="braun"/><div>braun</div>
   </button>
 </div>
-
+<div class="container">
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center"	(click)="router.navigate(['/alltips/schwarz'])">
+    <img class="schwarz"/><p>schwarz</p>
+  </button>
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center"	(click)="router.navigate(['/alltips/glas'])">
+    <img class="glas"/><p>glas</p>
+  </button>
+  <button
+  matRipple [matRippleCentered]="rippleCentered"
+  [matRippleDisabled]="rippleDisabled"
+  [matRippleUnbounded]="rippleUnbounded"
+  class="btn btn-center"	(click)="router.navigate(['/alltips/sondermuell'])">
+    <img class="sondermuell"/><p>sondermuell</p>
+  </button>
+</div>
 

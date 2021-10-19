@@ -1,9 +1,9 @@
 <div *ngIf="show">
     <mat-card  class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <div mat-card-avatar class="{{imgClass}}"></div>
         <mat-card-title>{{tip.Title}}</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        <mat-card-subtitle></mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="{{'data:image/jpg;base64,' + tip.ImageBase64}}" alt="Photo">
       <mat-card-content>

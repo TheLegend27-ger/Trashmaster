@@ -4,8 +4,34 @@
   border-radius: 10px;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+
+.allgemein {
+  background-image: url(../../../../assets/images/Muellwagen.svg);
+  background-size:cover;
 }
 
+.blau {
+  background-image: url(../../../../assets/images/Blaue_Tonne.svg);
+  background-size:cover;
+}
+.gelb {
+  background-image: url(../../../../assets/images/Gelbe_Tonne.svg);
+  background-size:cover;
+}
+.braun {
+  background-image: url(../../../../assets/images/Braune_Tonne.svg);
+  background-size:cover;
+}
+
+.schwarz {
+  background-image: url(../../../../assets/images/Schwarze_Tonne.svg);
+  background-size:cover;
+}
+.glas {
+  background-image: url(../../../../assets/images/Glas.svg);
+  background-size:cover;
+}
+.sondermuell {
+  background-image: url(../../../../assets/images/Schaedel.svg);
+  background-size:cover;
+}

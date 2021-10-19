@@ -15,22 +15,22 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
 
 
 const routes: Routes = [
-  { path: '', component: SomeTipsComponent },
-  { path: 'alltips', component: AllTipsComponent },
-  { path: 'alltips/allgemein', component: Category1Component },
-  { path: 'alltips/blau', component: Category1Component },
-  { path: 'alltips/gelb', component: Category1Component },
-  { path: 'alltips/braun', component: Category1Component },
-  { path: 'alltips/glas', component: Category1Component },
-  { path: 'alltips/schwarz', component: Category1Component },
-  { path: 'alltips/sondermuell', component: Category1Component },
-  { path: 'data', component: DataUploaderComponent },
-  { path: 'edittip/:tipId', component: DataUploaderTipsEditorComponent },
-  { path: 'edittip', component: DataUploaderTipsEditorComponent },
-  { path: 'editquestion', component: DataUploaderQuestionsEditorComponent },
-  { path: 'editquestion/:questionId', component: DataUploaderQuestionsEditorComponent },
-  { path: 'questionnaire', component: QuestionnaireComponent },
-  { path: 'quiz', component: OneQuestionComponent },
+  { path: '', component: SomeTipsComponent , data: { animation: 'MainPage' }},
+  { path: 'alltips', component: AllTipsComponent ,data:{animation: 'Alltips'} },
+  { path: 'alltips/allgemein', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/blau', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/gelb', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/braun', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/glas', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/schwarz', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/sondermuell', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'data', component: DataUploaderComponent ,data:{animation: 'Data'}},
+  { path: 'edittip/:tipId', component: DataUploaderTipsEditorComponent ,data:{animation: 'Dataunder'}},
+  { path: 'edittip', component: DataUploaderTipsEditorComponent ,data:{animation: 'Dataunder'}},
+  { path: 'editquestion', component: DataUploaderQuestionsEditorComponent ,data:{animation: 'Dataunder'}},
+  { path: 'editquestion/:questionId', component: DataUploaderQuestionsEditorComponent ,data:{animation: 'Dataunder'}},
+  { path: 'questionnaire', component: QuestionnaireComponent ,data:{animation: 'Questionnaire'}},
+  { path: 'quiz', component: OneQuestionComponent ,data:{animation: 'Quiz'}},
 ];
 
 

@@ -15,7 +15,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isClicked2 = false;
   isClicked3 = false;
   isClicked4 = false;
-
+  rippleCentered = true
+  rippleDisabled = false
+  rippleUnbounded = false
   constructor(public componentService: componentService, public router: Router) { }
 
   @Input() tips: TipData[] = [];
@@ -50,6 +52,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   button_color_change(id:any){
 
     switch(id) {
+      case "0": {
+        this.isClicked1 = false
+        this.isClicked2 = false
+        this.isClicked3 = false
+        this.isClicked4 = false
+         break;
+      }
       case "1": {
         this.isClicked1 = true
         this.isClicked2 = false

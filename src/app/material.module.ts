@@ -21,7 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatStepperModule} from '@angular/material/stepper';
-
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   imports:[
@@ -46,7 +46,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatDialogModule,
     MatRadioModule,
     MatButtonToggleModule,
-    MatStepperModule
+    MatStepperModule,
+    MatRippleModule
     ],
   exports:[
     MatButtonModule,
@@ -70,7 +71,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatDialogModule,
     MatRadioModule,
     MatButtonToggleModule,
-    MatStepperModule
+    MatStepperModule,
+    MatRippleModule
   ]
 })
 export class MaterialModule{}

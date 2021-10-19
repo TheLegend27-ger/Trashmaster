@@ -85,7 +85,7 @@ export class componentService{
     console.log("setCategoryTips")
     this.categoryTips = [...this.tips]
     console.log(this.categoryTips)
-    this. directReturn = false;
+    this.directReturn = false;
   }
   getSingleTipByCategory(tipType: any) {
     let escape = false
