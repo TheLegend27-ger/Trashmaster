@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'editquestion', component: DataUploaderQuestionsEditorComponent ,data:{animation: 'Dataunder'}},
   { path: 'editquestion/:questionId', component: DataUploaderQuestionsEditorComponent ,data:{animation: 'Dataunder'}},
   { path: 'questionnaire', component: QuestionnaireComponent ,data:{animation: 'Questionnaire'}},
-  { path: 'quiz', component: OneQuestionComponent ,data:{animation: 'Quiz'}},
+  { path: 'quiz', component: QuizComponent ,data:{animation: 'Quiz'}},
 ];
 
 
