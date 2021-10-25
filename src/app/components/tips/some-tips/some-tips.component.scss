@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+p{
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #a9a9a9;
+}
+
+
+.btn a{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid #5ffb22;
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: #5ffb22;
+	text-align: center;
+}
+
+
+.about,
+.services{
+	padding: 5% 10%;
+	text-align: center;
+}
+
+.title_about{
+  margin-bottom: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 38px;
+}
+
+.title_services{
+  margin-bottom: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 38px;
+}
+
 h2 {
   font-size: 45px;
   font-weight: 300;
@@ -10,14 +60,31 @@ h2 span {
   font-size: 30px;
 }
 
-p {
-  font-size: 20px;
+.diff_services{
+	display: flex;
+	margin-top: 35px;
+	justify-content: space-between;
+}
+
+.diff_service_item{
+	width: 30%;
+}
+
+.diff_service_item img{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.diff_service_item h3{
+	color: #5ffb22;
+	margin-bottom: 15px;
 }
 
 .container2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  margin-bottom: 50px;
 }
 
 .container2 > div {
@@ -57,9 +124,67 @@ p {
 }
 
 .bg1 {
-  background: url("https://c4.wallpaperflare.com/wallpaper/509/754/521/trash-environment-bag-wallpaper-preview.jpg");
+  background: url("https://free4kwallpapers.com/uploads/originals/2020/05/02/forest-wallpaper.jpg");
 }
 
 .bg2 {
-  background: url("https://www.wallpapertip.com/wmimgs/7-76091_backwater-woods-1000px-dark-nature-wallpaper-4k.png");
+  background: url("https://free4kwallpapers.com/uploads/originals/2020/05/02/forest-wallpaper.jpg");
+}
+
+.banner_image{
+	background: url("https://i.imgur.com/AS8APz9.jpg") no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+  font-size: 50px;
+}
+
+.banner_content h1 span{
+	color: #5ffb22;
+  font-size: 30px;
+  text-transform: lowercase;
+}
+
+.footer{
+	width: 100%;
+	text-align: center;
+	background: #444444;
+  padding: 20px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+.arrow{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	background: #5ffb22;
+	border-radius: 50%;
+}
+
+.arrow img{
+	width: 20px;
+	height: 20px;
+	z-index: 1;
 }
