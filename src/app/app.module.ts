@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
-import { AppWrapperComponent } from './components/app-wrapper/app-wrapper.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { AllTipsComponent } from './components/tips/all-tips/all-tips.component';
@@ -28,7 +28,6 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
 @NgModule({
   declarations: [
     AppComponent,
-    AppWrapperComponent,
     HeaderComponent,
     QuizComponent,
     AllTipsComponent,
