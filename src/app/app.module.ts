@@ -21,7 +21,7 @@ import { DataUploaderTipsEditorComponent } from './components/data-uploader/data
 import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
 import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
-import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 
@@ -41,7 +41,7 @@ import { SomeTipsComponent } from './components/tips/some-tips/some-tips.compone
     OneTipComponent,
     OneQuestionComponent,
     Category1Component,
-    SomeTipsComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

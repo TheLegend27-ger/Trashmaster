@@ -9,12 +9,12 @@ import { OneQuestionComponent } from './components/quiz/one-question/one-questio
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
-import { SomeTipsComponent } from './components/tips/some-tips/some-tips.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: SomeTipsComponent , data: { animation: 'MainPage' }},
+  { path: '', component: LandingPageComponent , data: { animation: 'MainPage' }},
   { path: 'alltips', component: AllTipsComponent ,data:{animation: 'Alltips'} },
   { path: 'alltips/allgemein', component: Category1Component ,data:{animation: 'ATunder'}},
   { path: 'alltips/blau', component: Category1Component ,data:{animation: 'ATunder'}},
