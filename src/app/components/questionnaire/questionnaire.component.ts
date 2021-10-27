@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
-import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 
@@ -14,7 +14,7 @@ import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class QuestionnaireComponent implements OnInit, OnDestroy {
   form!: FormGroup;
   floatLabelControl = new FormControl();
-  constructor(public componentService: componentService, fb: FormBuilder) {
+  constructor(private componentService: componentService,) {
 
   }
 
@@ -34,14 +34,14 @@ export class QuestionnaireComponent implements OnInit, OnDestroy {
 
   //#region ngOnDestroy
   ngOnDestroy(){
-    let test = this.floatLabelControl.value
-    console.log(test)
+    //let test = this.floatLabelControl.value
+    //console.log(test)
   }
   //#endregion
   onCheckQuestionnaire(){
     if (this.form.invalid) {
       console.log("invalid")
-      console.log(document.getElementsByClassName('ng-invalid'))
+      //console.log(document.getElementsByClassName('ng-invalid'))
       //for (let i = 0; i < document.getElementsByClassName('ng-invalid').length; i++){
       //  document.getElementsByClassName('ng-invalid').item(i)?.classList.add('invalid')
       //}

@@ -1,12 +1,11 @@
 import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatStepper } from '@angular/material/stepper';
 import { Subscription } from 'rxjs';
 import { QuestionData } from 'src/app/models/question.model';
 import { componentService } from '../componentService.service';
 import { ConfirmDialogOkComponent, ConfirmDialogOkModel } from '../confirmationdialog/confirm-dialog-ok.component';
-import { ConfirmDialogComponent } from '../confirmationdialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-quiz',
@@ -27,45 +26,11 @@ export class QuizComponent implements OnInit, OnDestroy {
   public newElement!: any;
   public nextStepWithoutConfirmDialog!: Boolean;
   private quizQuestions!: QuestionData[];
-  constructor(private _formBuilder: FormBuilder, private componentService: componentService,public dialog: MatDialog) {}
+
+  constructor(private componentService: componentService,public dialog: MatDialog) {}
   private questionsSub: Subscription = new Subscription();
   ngOnInit() {
-    this.quizQuestions = [];
-    this.componentService.getQuestions();
-    this.questionsSub = this.componentService
-      .getQuestionsUpdateListener()
-      .subscribe((questions: QuestionData[]) => {
-        this.questions = questions;
-        /*this.dataSource = new MatTableDataSource(this.questions);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 1);*/
-        let radiotxt = document.getElementsByClassName("radiotxt")
-        let radio = document.getElementsByClassName("radio")
-        let radiobtn = document.getElementsByClassName("mat-radio-label-content")
-        let categories = ["allgemein", "blau", "braun","gelb","glas","schwarz","sondermuell"]
-        let counter = 0;
-        let tempquestions = [...this.questions]
-        this.shuffle(tempquestions)
-        for (let j = 0; j < categories.length; j++){
-          let radiotxt = document.getElementsByClassName(categories[j])
-          for (let i = 0; i < 6; i++ ){
-            let tempQuestion = tempquestions.findIndex(element => element.QuestionType == categories[j])
-            radiotxt[i].innerHTML = tempquestions[tempQuestion].Title
-            console.log(radiobtn[counter].innerHTML)
-            radiobtn[counter].textContent=  tempquestions[tempQuestion].Answer1
-            radiobtn[counter + 1].textContent =   tempquestions[tempQuestion].Answer2
-            radiobtn[counter + 2].textContent =  tempquestions[tempQuestion].Answer3
-            radiobtn[counter + 3].textContent =   tempquestions[tempQuestion].Answer4
-            counter = counter + 4
-            this.quizQuestions.push(tempquestions[tempQuestion])
-            tempquestions.splice(tempQuestion, 1)
-          }
-        }
-        console.log(this.quizQuestions)
-      });
+
 
 
 
@@ -131,6 +96,8 @@ export class QuizComponent implements OnInit, OnDestroy {
   //#region ngOnDestroy
   ngOnDestroy(){
     console.log(this.questions)
+    this.questionsSub.unsubscribe()
+    this.questions= []
   }
   //#endregion
 
@@ -321,5 +288,38 @@ export class QuizComponent implements OnInit, OnDestroy {
     }
 
     return array;
+  }
+
+  startQuiz(){
+    this.quizQuestions = [];
+    this.componentService.getQuestions();
+    this.questionsSub = this.componentService
+      .getQuestionsUpdateListener()
+      .subscribe((questions: QuestionData[]) => {
+        this.questions = questions;
+        let radiotxt = document.getElementsByClassName("radiotxt")
+        let radio = document.getElementsByClassName("radio")
+        let radiobtn = document.getElementsByClassName("mat-radio-label-content")
+        let categories = ["allgemein", "blau", "braun","gelb","glas","schwarz","sondermuell"]
+        let counter = 0;
+        let tempquestions = [...this.questions]
+        //this.shuffle(tempquestions)
+        for (let j = 0; j < categories.length; j++){
+          let radiotxt = document.getElementsByClassName(categories[j])
+          for (let i = 0; i < 6; i++ ){
+            let tempQuestion = tempquestions.findIndex(element => element.QuestionType == categories[j])
+            radiotxt[i].innerHTML = tempquestions[tempQuestion].Title
+            console.log(radiobtn[counter].innerHTML)
+            radiobtn[counter].textContent=  tempquestions[tempQuestion].Answer1
+            radiobtn[counter + 1].textContent =   tempquestions[tempQuestion].Answer2
+            radiobtn[counter + 2].textContent =  tempquestions[tempQuestion].Answer3
+            radiobtn[counter + 3].textContent =   tempquestions[tempQuestion].Answer4
+            counter = counter + 4
+            this.quizQuestions.push(tempquestions[tempQuestion])
+            tempquestions.splice(tempQuestion, 1)
+          }
+        }
+        console.log(this.quizQuestions)
+      });
   }
 }
