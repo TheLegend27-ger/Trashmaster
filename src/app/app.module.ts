@@ -19,7 +19,6 @@ import { DataUploaderQuestionsOverviewComponent } from './components/data-upload
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { DataUploaderTipsEditorComponent } from './components/data-uploader/data-uploader-tips-editor/data-uploader-tips-editor.component';
 import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
-import { OneQuestionComponent } from './components/quiz/one-question/one-question.component';
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
@@ -39,7 +38,6 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     DataUploaderQuestionsEditorComponent,
     DataUploaderTipsEditorComponent,
     OneTipComponent,
-    OneQuestionComponent,
     Category1Component,
     LandingPageComponent,
   ],
