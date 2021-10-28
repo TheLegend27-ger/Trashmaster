@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1910px" height="1910px" viewBox="0 0 1910 1910" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Questionaire" transform="translate(5 5)">
+    <path d="M0 0L1900 0L1900 1900L0 1900L0 0Z" id="Rectangle" fill="#A5B975" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L1080 0L1080 1595.82L0 1595.82L0 0Z" transform="translate(410.0005 174.99988)" id="Rectangle" fill="#A76A01" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L1012.32 0L1012.32 1495.82L0 1495.82L0 0Z" transform="translate(444.0005 224.99988)" id="Rectangle-2" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <g id="Questionaire" transform="translate(780.3385 328.79993)">
+      <path d="M163.48 15.108Q164.324 15.9091 165.5 15.9091Q166.676 15.9091 167.52 15.108Q168.364 14.3068 168.364 13.1818Q168.364 12.0568 167.52 11.2557Q166.676 10.4545 165.5 10.4545Q164.324 10.4546 163.48 11.2557Q162.636 12.0568 162.636 13.1818Q162.636 14.3068 163.48 15.108ZM266.662 15.108Q267.506 15.9091 268.682 15.9091Q269.858 15.9091 270.702 15.108Q271.545 14.3068 271.545 13.1818Q271.545 12.0568 270.702 11.2557Q269.858 10.4545 268.682 10.4545Q267.506 10.4546 266.662 11.2557Q265.818 12.0568 265.818 13.1818Q265.818 14.3068 266.662 15.108ZM46.9205 37.6506Q48.5227 33.9091 48.5227 29Q48.5227 23.4773 46.5284 19.4545Q44.5341 15.4318 41.0568 13.25Q37.5795 11.0682 33.1136 11.0682Q28.6477 11.0682 25.1705 13.25Q21.6932 15.4318 19.6989 19.4545Q17.7045 23.4773 17.7045 29Q17.7045 34.5227 19.6989 38.5455Q21.6932 42.5682 25.1705 44.75Q28.6477 46.9318 33.1136 46.9318Q36.5057 46.9318 39.4034 45.6364L42.4546 49.7273L47.0909 49.7273L42.5398 43.6761Q45.3182 41.392 46.9205 37.6506ZM155.386 20.2727L155.386 23.6818L149.795 23.6818L149.795 38.9545Q149.795 40.6591 150.298 41.5028Q150.801 42.3466 151.594 42.6278Q152.386 42.9091 153.273 42.9091Q153.938 42.9091 154.364 42.8324Q154.79 42.7557 155.045 42.7045L155.864 46.3182Q155.455 46.4716 154.722 46.6335Q153.989 46.7955 152.864 46.7955Q151.159 46.7955 149.531 46.0625Q147.903 45.3295 146.838 43.8295Q145.773 42.3295 145.773 40.0455L145.773 23.6818L141.818 23.6818L141.818 20.2727L145.773 20.2727L145.773 14L149.795 14L149.795 20.2727L155.386 20.2727ZM36.3864 35.5455L31.75 35.5455L36.9318 42.3295Q35.1421 42.9773 33.1136 42.9773Q29.9432 42.9773 27.3778 41.375Q24.8125 39.7727 23.304 36.6534Q21.7955 33.5341 21.7955 29Q21.7955 24.4659 23.304 21.3466Q24.8125 18.2273 27.3778 16.625Q29.9432 15.0227 33.1136 15.0227Q36.2841 15.0227 38.8494 16.625Q41.4148 18.2273 42.9233 21.3466Q44.4318 24.4659 44.4318 29Q44.4318 32.9545 43.2642 35.8267Q42.0966 38.6989 40.1023 40.4375L36.3864 35.5455ZM280.023 46.4545L280.023 20.2727L283.909 20.2727L283.909 24.2273L284.182 24.2273Q284.898 22.2841 286.773 21.0739Q288.648 19.8636 291 19.8636Q291.443 19.8636 292.108 19.8807Q292.773 19.8977 293.114 19.9318L293.114 24.0227Q292.909 23.9716 292.185 23.8608Q291.46 23.75 290.659 23.75Q287.795 23.75 285.92 25.4886Q284.045 27.2273 284.045 29.8864L284.045 46.4545L280.023 46.4545ZM97.9318 47Q94.1477 47 91.4119 45.321Q88.6761 43.642 87.2017 40.6165Q85.7273 37.5909 85.7273 33.5682Q85.7273 29.5455 87.2017 26.4687Q88.6761 23.392 91.3267 21.6619Q93.9773 19.9318 97.5227 19.9318Q99.5682 19.9318 101.563 20.6136Q103.557 21.2955 105.193 22.821Q106.83 24.3466 107.801 26.8523Q108.773 29.358 108.773 33.0227L108.773 34.7273L89.7671 34.7273Q89.9034 38.9205 92.1449 41.1534Q94.3864 43.3864 97.9318 43.3864Q100.301 43.3864 102.006 42.3636Q103.71 41.3409 104.477 39.2955L108.364 40.3864Q107.443 43.3523 104.682 45.1761Q101.92 47 97.9318 47ZM131.841 27.1591L135.455 26.1364Q134.517 23.3409 132.293 21.6364Q130.068 19.9318 126.182 19.9318Q123.42 19.9318 121.247 20.9034Q119.074 21.875 117.821 23.5795Q116.568 25.2841 116.568 27.5Q116.568 30.2102 118.247 32.0085Q119.926 33.8068 123.523 34.6591L127.886 35.6818Q131.773 36.5852 131.773 39.3636Q131.773 41.0511 130.111 42.2528Q128.449 43.4545 125.636 43.4545Q120.642 43.4545 119.568 39.2273L115.75 40.1818Q116.449 43.5227 119.074 45.2614Q121.699 47 125.705 47Q128.756 47 131.057 45.9773Q133.358 44.9545 134.645 43.1818Q135.932 41.4091 135.932 39.1591Q135.932 33.7727 128.977 32.0682L125.091 31.1136Q122.773 30.5341 121.682 29.6648Q120.591 28.7955 120.591 27.2955Q120.591 25.608 122.185 24.5085Q123.778 23.4091 126.182 23.4091Q128.824 23.4091 130.068 24.6023Q131.313 25.7955 131.841 27.1591ZM187.477 47Q183.932 47 181.264 45.3125Q178.597 43.625 177.105 40.5909Q175.614 37.5568 175.614 33.5Q175.614 29.4091 177.105 26.358Q178.597 23.3068 181.264 21.6193Q183.932 19.9318 187.477 19.9318Q191.023 19.9318 193.69 21.6193Q196.358 23.3068 197.849 26.358Q199.341 29.4091 199.341 33.5Q199.341 37.5568 197.849 40.5909Q196.358 43.625 193.69 45.3125Q191.023 47 187.477 47ZM211.5 46.4545L211.5 30.7045Q211.5 27.2784 213.401 25.4119Q215.301 23.5455 218.182 23.5455Q220.977 23.5455 222.58 25.2756Q224.182 27.0057 224.182 30.0909L224.182 46.4545L228.205 46.4545L228.205 29.8182Q228.205 24.8068 225.759 22.3693Q223.313 19.9318 219.341 19.9318Q216.375 19.9318 214.5 21.1506Q212.625 22.3693 211.705 24.3636L211.364 24.3636L211.364 20.2727L207.477 20.2727L207.477 46.4545L211.5 46.4545ZM245.273 47.0682Q242.784 47.0682 240.756 46.1222Q238.727 45.1761 237.534 43.3778Q236.341 41.5795 236.341 39.0227Q236.341 36.7727 237.227 35.3665Q238.114 33.9602 239.597 33.1591Q241.08 32.358 242.878 31.9574Q244.676 31.5568 246.5 31.3182Q248.886 31.0114 250.378 30.8494Q251.869 30.6875 252.56 30.2955Q253.25 29.9034 253.25 28.9318L253.25 28.7955Q253.25 26.2727 251.878 24.875Q250.506 23.4773 247.727 23.4773Q244.847 23.4773 243.21 24.7386Q241.574 26 240.909 27.4318L237.091 26.0682Q238.114 23.6818 239.827 22.3437Q241.54 21.0057 243.577 20.4687Q245.614 19.9318 247.591 19.9318Q248.852 19.9318 250.497 20.2301Q252.142 20.5284 253.685 21.4489Q255.227 22.3693 256.25 24.2273Q257.273 26.0852 257.273 29.2045L257.273 46.4545L253.25 46.4545L253.25 42.9091L253.045 42.9091Q252.636 43.7614 251.682 44.733Q250.727 45.7045 249.142 46.3864Q247.557 47.0682 245.273 47.0682ZM304.344 45.321Q307.08 47 310.864 47Q314.852 47 317.614 45.1761Q320.375 43.3523 321.295 40.3864L317.409 39.2955Q316.642 41.3409 314.938 42.3636Q313.233 43.3864 310.864 43.3864Q307.318 43.3864 305.077 41.1534Q302.835 38.9205 302.699 34.7273L321.705 34.7273L321.705 33.0227Q321.705 29.358 320.733 26.8523Q319.761 24.3466 318.125 22.821Q316.489 21.2955 314.494 20.6136Q312.5 19.9318 310.455 19.9318Q306.909 19.9318 304.259 21.6619Q301.608 23.392 300.134 26.4687Q298.659 29.5455 298.659 33.5682Q298.659 37.5909 300.134 40.6165Q301.608 43.642 304.344 45.321ZM73.5682 20.2727L73.5682 35.75Q73.5682 38.2045 72.5028 39.7898Q71.4375 41.375 69.8778 42.142Q68.3182 42.9091 66.8182 42.9091Q64.3125 42.9091 62.7017 41.2045Q61.0909 39.5 61.0909 36.6364L61.0909 20.2727L57.0682 20.2727L57.0682 36.9091Q57.0682 41.9205 59.4546 44.358Q61.8409 46.7955 65.5227 46.7955Q68.4886 46.7955 70.4318 45.4063Q72.375 44.017 73.2955 42.0227L73.5682 42.0227L73.5682 46.4545L77.5909 46.4545L77.5909 20.2727L73.5682 20.2727ZM163.455 20.2727L163.455 46.4545L167.477 46.4545L167.477 20.2727L163.455 20.2727ZM266.636 20.2727L266.636 46.4545L270.659 46.4545L270.659 20.2727L266.636 20.2727ZM89.7671 31.25L104.682 31.25Q104.682 27.9261 102.739 25.7358Q100.795 23.5455 97.5227 23.5455Q95.2216 23.5455 93.5341 24.6193Q91.8466 25.6932 90.875 27.4574Q89.9034 29.2216 89.7671 31.25ZM187.477 43.3864Q190.17 43.3864 191.909 42.0057Q193.648 40.625 194.483 38.375Q195.318 36.125 195.318 33.5Q195.318 30.875 194.483 28.608Q193.648 26.3409 191.909 24.9432Q190.17 23.5455 187.477 23.5455Q184.784 23.5455 183.045 24.9432Q181.307 26.3409 180.472 28.608Q179.636 30.875 179.636 33.5Q179.636 36.125 180.472 38.375Q181.307 40.625 183.045 42.0057Q184.784 43.3864 187.477 43.3864ZM317.614 31.25L302.699 31.25Q302.835 29.2216 303.807 27.4574Q304.778 25.6932 306.466 24.6193Q308.153 23.5455 310.455 23.5455Q313.727 23.5455 315.67 25.7358Q317.614 27.9261 317.614 31.25ZM245.886 43.4545Q248.273 43.4545 249.918 42.517Q251.563 41.5795 252.406 40.0966Q253.25 38.6136 253.25 36.9773L253.25 33.2955Q252.994 33.6023 252.134 33.8494Q251.273 34.0966 250.156 34.2756Q249.04 34.4545 247.992 34.5824Q246.943 34.7102 246.295 34.7955Q244.727 35 243.372 35.4517Q242.017 35.9034 241.19 36.7983Q240.364 37.6932 240.364 39.2273Q240.364 41.3239 241.923 42.3892Q243.483 43.4545 245.886 43.4545Z" />
+    </g>
+    <path d="M0 46.5C0 20.8188 20.8188 0 46.5 0C72.1812 0 93 20.8188 93 46.5C93 72.1812 72.1812 93 46.5 93C20.8188 93 0 72.1812 0 46.5Z" transform="translate(903.99976 129.40002)" id="Ellipse" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M0 0L416 0L416 121L0 121L0 0Z" transform="translate(741.99976 161.80005)" id="Rectangle-3" fill="#D3D3D3" fill-rule="evenodd" stroke="none" />
+    <path d="M0 1L831.5 1" transform="translate(534.99976 1651.9746)" id="Line-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+    <path d="M0 1L786.001 1" transform="translate(557.499 1665.3496)" id="Line-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+    <path d="M0 1L831.5 1" transform="translate(534.99976 1678.7002)" id="Line-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+    <path d="M0 1L414.501 1" transform="translate(728.499 1692.1001)" id="Line-8" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+    <g id="Question" transform="translate(533.1996 478.59985)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-9" transform="translate(533.6996 1294.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-7" transform="translate(533.1996 1192.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-8" transform="translate(533.1996 1090.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-2" transform="translate(534.1996 988.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-3" transform="translate(533.6996 886.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-4" transform="translate(533.6996 784.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-5" transform="translate(533.6996 682.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Question-6" transform="translate(533.6996 580.6)">
+      <path d="M0 1L496 1" transform="translate(0.00012207031 11.000122)" id="Line" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0.00012207031 26.000122)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 1L496 1" transform="translate(0 41.000122)" id="Line-3" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" stroke-linecap="square" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(746.5001 0)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(657.5001 0)" id="Rectangle-5" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+      <path d="M0 0L56 0L56 56L0 56L0 0Z" transform="translate(568.5001 0)" id="Rectangle-6" fill="none" fill-rule="evenodd" stroke="#808080" stroke-width="5" />
+    </g>
+    <g id="Cross" transform="translate(1095.6997 477.3001)">
+      <path d="M58 0L0 57" id="Line" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+      <path d="M60 0L0 50.5" transform="matrix(-1 0 0 1 60.5 3.2998657)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+    </g>
+    <g id="Cross-4" transform="translate(1097.1997 986.6)">
+      <path d="M58 0L0 57" id="Line" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+      <path d="M60 0L0 50.5" transform="matrix(-1 0 0 1 60.5 3.2998047)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+    </g>
+    <g id="Cross-5" transform="translate(1274.6997 1191.2999)">
+      <path d="M58 0L0 57" id="Line" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+      <path d="M60 0L0 50.5" transform="matrix(-1 0 0 1 60.5 3.2998047)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+    </g>
+    <g id="Cross-3" transform="matrix(0.9848077 -0.17364818 0.17364818 0.9848077 1186.2104 688.5856)">
+      <path d="M58 0L0 57" transform="translate(0 6.1035156E-05)" id="Line" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+      <path d="M60 0L0 50.5" transform="matrix(-1 0 0 1 60.500122 3.300171)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+    </g>
+    <g id="Cross-2" transform="matrix(0.99026805 0.1391731 -0.1391731 0.99026805 1279.4603 577.3678)">
+      <path d="M58 0L0 57" id="Line" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+      <path d="M60 0L0 50.5" transform="matrix(-1 0 0 1 60.499817 3.2994385)" id="Line-2" fill="none" fill-rule="evenodd" stroke="#FC4850" stroke-width="10" stroke-linecap="square" />
+    </g>
+    <path d="M0 0L884 0L884 972L0 972L0 0Z" transform="translate(506.99976 429.60004)" id="Rectangle-4" fill="none" fill-rule="evenodd" stroke="#686868" stroke-width="5" />
+  </g>
+</svg>
