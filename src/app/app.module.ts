@@ -22,6 +22,7 @@ import { OneTipComponent } from './components/tips/one-tip/one-tip.component';
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ConfirmDialogOkComponent } from './components/confirmationdialog/confirm-dialog-ok.component';
+import { FullquizComponent } from './components/quiz/fullquiz/fullquiz.component';
 
 
 
@@ -41,7 +42,8 @@ import { ConfirmDialogOkComponent } from './components/confirmationdialog/confir
     OneTipComponent,
     Category1Component,
     LandingPageComponent,
-    ConfirmDialogOkComponent
+    ConfirmDialogOkComponent,
+    FullquizComponent
   ],
   imports: [
     BrowserModule,

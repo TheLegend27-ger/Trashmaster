@@ -2,7 +2,7 @@ import { trigger, transition, style, query, animateChild, animate, group } from 
 
   export const fader =
   trigger('routeAnimations', [
-    transition('MainPage<=>Alltips, MainPage<=>Questionnaire, MainPage<=>Quiz, MainPage<=>Data,Quiz<=>Alltips,Quiz<=>Questionnaire, Questionnaire<=>Alltips,MainPage<=>Alltips, Data<=>Quiz, Data<=>Questionnaire, Data<=>Alltips, Data<=>Dataunder, Alltips<=>ATunder', [
+    transition('MainPage<=>Alltips, MainPage<=>Questionnaire, MainPage<=>FullQuiz,Quiz<=>FullQuiz, MainPage<=>Data,FullQuiz<=>Alltips,FullQuiz<=>Questionnaire, MainPage<=>FullQuiz, MainPage<=>Data,Quiz<=>Alltips,Quiz<=>Questionnaire,Questionnaire<=>Alltips,MainPage<=>Alltips, Data<=>FullQuiz, Data<=>Quiz,Data<=>Questionnaire, Data<=>Alltips, Data<=>Dataunder, Alltips<=>ATunder', [
       // Set a default  style for enter and leave
       query(':enter, :leave', [
         style({

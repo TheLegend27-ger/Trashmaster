@@ -9,6 +9,7 @@ import { DataUploaderTipsEditorComponent } from './components/data-uploader/data
 import { DataUploaderQuestionsEditorComponent } from './components/data-uploader/data-uploader-questions-editor/data-uploader-questions-editor.component';
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { FullquizComponent } from './components/quiz/fullquiz/fullquiz.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'editquestion/:questionId', component: DataUploaderQuestionsEditorComponent ,data:{animation: 'Dataunder'}},
   { path: 'questionnaire', component: QuestionnaireComponent ,data:{animation: 'Questionnaire'}},
   { path: 'quiz', component: QuizComponent ,data:{animation: 'Quiz'}},
+  { path: 'fullquiz', component: FullquizComponent ,data:{animation: 'FullQuiz'}},
 ];
 
 
