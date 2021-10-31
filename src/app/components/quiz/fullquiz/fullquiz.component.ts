@@ -50,7 +50,7 @@ export class FullquizComponent implements OnInit {
           let radiotxt = document.getElementsByClassName(categories[j])
           for (let i = 0; i < 6; i++ ){
             let tempQuestion = tempquestions.findIndex(element => element.QuestionType == categories[j])
-            radiotxt[i].innerHTML = tempquestions[tempQuestion].Title
+            radiotxt[i].innerHTML = tempquestions[tempQuestion].Question
             console.log(radiobtn[counter].innerHTML)
             radiobtn[counter].textContent=  tempquestions[tempQuestion].Answer1
             radiobtn[counter + 1].textContent =   tempquestions[tempQuestion].Answer2
