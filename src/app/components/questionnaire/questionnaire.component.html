@@ -1,81 +1,95 @@
-<mat-card class="qst">
-  <mat-card-title class="qst-title" color="accent">Questionaire</mat-card-title>
-</mat-card>
-<form [formGroup]="form" (submit)="onCheckQuestionnaire()">
-<mat-card class="frage">
-  <mat-card-title>Ist das Produkt aus Plastik?</mat-card-title>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Plastic">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+<div class="banner_image">
+  <div class="banner_content">
+    <h1>Questionnaire<br/>
+      <span>fülle alle Fragen aus um dein Produkt einzukategorisieren!</span>
+    </h1>
   </div>
-</mat-card>
-<mat-card class="frage">
-  <mat-card-title>Ist das Produkt aus Stoff?</mat-card-title>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Fabric">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+</div>
+
+
+<div class="content">
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
-</mat-card>
-<mat-card class="frage">
-  <mat-card-title>Ist das Produkt aus Metal?</mat-card-title>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Metal">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
-</mat-card>
-<mat-card class="frage">
-  <mat-card-title>Ist das Produkt organisch?</mat-card-title>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Organic">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
-</mat-card>
-<mat-card class="frage">
-  <mat-card-title>Kann man das Produkt essen?</mat-card-title>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Eatable">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
-</mat-card>
-<mat-card class="frage">
-  <mat-card-title>Hat das Produkt Arme?</mat-card-title>
-  <mat-card-subtitle>(Ist es ein Mensch?)</mat-card-subtitle>
-  <div class="example-container">
-      <div>
-        <mat-radio-group required formControlName="Arms">
-          <mat-radio-button value="ja">Ja</mat-radio-button>
-          <mat-radio-button value="nein">Nein</mat-radio-button>
-          <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
-        </mat-radio-group>
-      </div>
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
   </div>
-</mat-card>
-<mat-card class="save">
-    <button class="save-button" mat-raised-button color="accent" type="submit">Suche</button>
-</mat-card>
-</form>
+  <div class="card">
+    <p class="card__image">Ist das Produkt aus Holz?</p>
+    <div class="card__content">
+      <mat-radio-group required formControlName="Plastic">
+        <mat-radio-button value="ja">Ja</mat-radio-button>
+        <mat-radio-button value="nein">Nein</mat-radio-button>
+        <mat-radio-button value="ka">Keine Ahnung</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+</div>
+<button class="btn" mat-raised-button color="accent" type="submit">Suche</button>
+
+
+<!--
+<div class="cards">
+  <form [formGroup]="form" (submit)="onCheckQuestionnaire()">
+  <div class="card">
+    <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
+    <div class="card__content">
+    </div>
+  </div>
+  <div class="card">
+    <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
+    <div class="card__content">
+    </div>
+  </div>
+  </form>
+</div>
+-->
+
+
+
+
+
