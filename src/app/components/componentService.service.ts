@@ -57,7 +57,6 @@ export class componentService{
   }
 
   getTips(): void{
-    console.log("gettips")
     this.http
       .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
       .pipe(map((tipData:any) => {
@@ -72,11 +71,8 @@ export class componentService{
         })
       }))
       .subscribe((transformedTips) => {
-        this.tips = transformedTips;
-        //this.setTipIds([...this.tips]);
-        //console.log(this.tipIds)
+        this.tips = transformedTips
         this.tipsUpdated.next([...this.tips])
-        //console.log(transformedTips)
       });
   }
   //Rückgabe eines zufälligen Tipps aller bestehenden Tipps
