@@ -20,6 +20,7 @@ export class QuestionnaireComponent implements OnInit, OnDestroy {
 
   //#region ngOnInit
   ngOnInit(): void {
+    /*
     this.form = new FormGroup({
       Plastic: new FormControl(null, {validators: [Validators.required] }),
       Fabric: new FormControl(null, { validators: [Validators.required] }),
@@ -28,7 +29,7 @@ export class QuestionnaireComponent implements OnInit, OnDestroy {
       Eatable: new FormControl(null, { validators: [Validators.required] }),
       Arms: new FormControl(null, { validators: [Validators.required] }),
     });
-
+    */
   }
   //#endregion
 

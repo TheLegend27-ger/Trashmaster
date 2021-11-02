@@ -1,4 +1,4 @@
-//Backend Data Model
+//Backend Data Model für die Tipps
 const mongoose = require('mongoose')
 
 const tipDataSchema = mongoose.Schema({

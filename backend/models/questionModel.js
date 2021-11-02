@@ -1,4 +1,4 @@
-//Backend Data Model
+//Backend Data Model für die Fragen
 const mongoose = require('mongoose')
 
 const questionDataSchema = mongoose.Schema({
