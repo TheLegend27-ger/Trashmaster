@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isClicked2 = false;
   isClicked3 = false;
   isClicked4 = false;
+  isClicked5 = false;
   rippleCentered = true
   rippleDisabled = false
   rippleUnbounded = false
@@ -57,6 +58,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked2 = false
         this.isClicked3 = false
         this.isClicked4 = false
+        this.isClicked5 = false
          break;
       }
       case "1": {
@@ -64,6 +66,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked2 = false
         this.isClicked3 = false
         this.isClicked4 = false
+        this.isClicked5 = false
          break;
       }
       case "2": {
@@ -71,6 +74,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked2 = true
         this.isClicked3 = false
         this.isClicked4 = false
+        this.isClicked5 = false
          break;
       }
       case "3": {
@@ -78,6 +82,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked2 = false
         this.isClicked3 = true
         this.isClicked4 = false
+        this.isClicked5 = false
          break;
       }
       case "4": {
@@ -85,6 +90,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked2 = false
         this.isClicked3 = false
         this.isClicked4 = true
+        this.isClicked5 = false
+         break;
+      }
+      case "5": {
+        this.isClicked1 = false
+        this.isClicked2 = false
+        this.isClicked3 = false
+        this.isClicked4 = false
+        this.isClicked5 = true
          break;
       }
    }
