@@ -10,6 +10,7 @@ import { DataUploaderQuestionsEditorComponent } from './components/data-uploader
 import { Category1Component } from './components/tips/all-tips/category1/category1.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { FullquizComponent } from './components/quiz/fullquiz/fullquiz.component';
+import { AllPostsComponent } from './components/trash-talk/one-post/all-posts/all-posts/all-posts.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'questionnaire', component: QuestionnaireComponent ,data:{animation: 'Questionnaire'}},
   { path: 'quiz', component: QuizComponent ,data:{animation: 'Quiz'}},
   { path: 'fullquiz', component: FullquizComponent ,data:{animation: 'FullQuiz'}},
+  { path: 'forum', component: AllPostsComponent,data:{animation: 'Forum'}}
 ];
 
 
