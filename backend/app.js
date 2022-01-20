@@ -27,9 +27,9 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(()=>{
     console.log('connected to database!')
   })
-  .catch(()=>{
-    console.log('connection failed!')
-  });
+  //.catch(()=>{
+  //  console.log('connection failed!')
+ // });
 
 //Nutzung der Schemata und export des gesamten app Moduls
 app.use("/api/questions",questionRoutes)

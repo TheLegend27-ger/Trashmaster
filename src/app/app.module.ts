@@ -23,6 +23,8 @@ import { Category1Component } from './components/tips/all-tips/category1/categor
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ConfirmDialogOkComponent } from './components/confirmationdialog/confirm-dialog-ok.component';
 import { FullquizComponent } from './components/quiz/fullquiz/fullquiz.component';
+import { PostComponent } from './components/trash-talk/one-post/post/post.component';
+import { AllPostsComponent } from './components/trash-talk/one-post/all-posts/all-posts/all-posts.component';
 
 
 
@@ -43,7 +45,9 @@ import { FullquizComponent } from './components/quiz/fullquiz/fullquiz.component
     Category1Component,
     LandingPageComponent,
     ConfirmDialogOkComponent,
-    FullquizComponent
+    FullquizComponent,
+    PostComponent,
+    AllPostsComponent
   ],
   imports: [
     BrowserModule,
