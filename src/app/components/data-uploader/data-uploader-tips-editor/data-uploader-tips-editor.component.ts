@@ -47,7 +47,7 @@ export class DataUploaderTipsEditorComponent implements OnInit {
         this.mode = "edit";
         this.tipId = paramMap.get("tipId");
         this.isLoading = true;
-        this.componentService.getSingleTip(this.tipId).subscribe(TipData => {
+        this.componentService.getSingleTipFromDatabase(this.tipId).subscribe(TipData => {
           this.isLoading = false;
           this.tip = {
             id: TipData._id,

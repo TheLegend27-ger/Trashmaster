@@ -1,6 +1,7 @@
 import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
 import { TipData } from 'src/app/models/tip.model';
 import { componentService } from '../../../componentService.service';
 @Component({
@@ -12,7 +13,7 @@ export class Category1Component implements OnInit {
 
   private tipsSub: Subscription = new Subscription();
   public tips!: TipData[];
-  constructor(public componentService: componentService, public router:Router ) { }
+  constructor(public componentService: componentService, public router:Router) { }
 
   ngOnInit(): void {
     //this.componentService.getTips();
@@ -28,4 +29,10 @@ export class Category1Component implements OnInit {
 
   }
 
+  navigateToOrigin(){
+    origin = this.componentService.getOrigin()
+    this.router.navigate([origin])
+    console.log("navigate")
+    this.componentService.setSearchbarVisibility(true)
+  }
 }

@@ -41,8 +41,8 @@
       </button>
       </div>
       <span class="example-spacer"></span>
-      <mat-icon class="searchIcon" matPrefix>search</mat-icon>
-      <mat-form-field floatLabel="never" class="searchbar">
+      <mat-icon *ngIf="hasNoKeyword" class="searchIcon" matPrefix>search</mat-icon>
+      <mat-form-field  *ngIf="hasNoKeyword" floatLabel="never" class="searchbar">
         <input #searchInput matInput  (keyup.enter)="applyFilter($event)" placeholder="Suche ...">
       </mat-form-field>
     </mat-toolbar-row>

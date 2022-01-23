@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { componentService } from '../componentService.service';
-import { Router } from '@angular/router';
+import {  ActivatedRoute, NavigationEnd, ParamMap, Router } from '@angular/router';
 import { TipData } from 'src/app/models/tip.model';
 import { Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
@@ -10,7 +10,11 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-
+  constructor(public componentService: componentService, public route: ActivatedRoute, public router: Router) {
+    this.router.events.subscribe((ev) => {
+      if (ev instanceof NavigationEnd) { this.checkVisibility()}
+    });
+  }
   isClicked1 = false;
   isClicked2 = false;
   isClicked3 = false;
@@ -19,7 +23,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   rippleCentered = true
   rippleDisabled = false
   rippleUnbounded = false
-  constructor(public componentService: componentService, public router: Router) { }
+
 
   @Input() tips: TipData[] = [];
   dataSource!: MatTableDataSource<TipData>
@@ -40,7 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       });
 
       window.addEventListener("beforeunload", function(event) { event.returnValue = false });
-
+      this.checkVisibility;
 
   }
   //#endregion
@@ -51,7 +55,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   button_color_change(id:any){
-
     switch(id) {
       case "0": {
         this.isClicked1 = false
@@ -59,6 +62,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = false
         this.isClicked4 = false
         this.isClicked5 = false
+        this.componentService.setOrigin('/')
          break;
       }
       case "1": {
@@ -67,6 +71,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = false
         this.isClicked4 = false
         this.isClicked5 = false
+        this.componentService.setOrigin('/alltips')
          break;
       }
       case "2": {
@@ -75,6 +80,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = false
         this.isClicked4 = false
         this.isClicked5 = false
+        this.componentService.setOrigin('/questionnaire')
          break;
       }
       case "3": {
@@ -83,6 +89,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = true
         this.isClicked4 = false
         this.isClicked5 = false
+        this.componentService.setOrigin('/quiz')
          break;
       }
       case "4": {
@@ -91,6 +98,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = false
         this.isClicked4 = true
         this.isClicked5 = false
+        this.componentService.setOrigin('/forum')
          break;
       }
       case "5": {
@@ -99,18 +107,30 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.isClicked3 = false
         this.isClicked4 = false
         this.isClicked5 = true
+        this.componentService.setOrigin('/data')
          break;
       }
    }
-
+    this.componentService.setSearchbarVisibility(true)
+    this.checkVisibility();
 
   }
   //#endregion
 
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    console.log(this.dataSource)
+    this.router.navigate(['/alltips/' + (event.target as HTMLInputElement).value])
+    this.isClicked1 = false
+    this.isClicked2 = false
+    this.isClicked3 = false
+    this.isClicked4 = false
+    this.isClicked5 = false
+    this.componentService.setSearchbarVisibility(false)
+    this.checkVisibility();
+  }
+  hasNoKeyword = true
+  checkVisibility(){
+    this.hasNoKeyword = this.componentService.getSearchbarVisibility()
+    console.log("check" + this.hasNoKeyword)
   }
 
 

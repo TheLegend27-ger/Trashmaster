@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'alltips/glas', component: Category1Component ,data:{animation: 'ATunder'}},
   { path: 'alltips/schwarz', component: Category1Component ,data:{animation: 'ATunder'}},
   { path: 'alltips/sondermuell', component: Category1Component ,data:{animation: 'ATunder'}},
+  { path: 'alltips/:keyword', component: Category1Component ,data:{animation: 'ATunder'}},
   { path: 'data', component: DataUploaderComponent ,data:{animation: 'Data'}},
   { path: 'edittip/:tipId', component: DataUploaderTipsEditorComponent ,data:{animation: 'Dataunder'}},
   { path: 'edittip', component: DataUploaderTipsEditorComponent ,data:{animation: 'Dataunder'}},

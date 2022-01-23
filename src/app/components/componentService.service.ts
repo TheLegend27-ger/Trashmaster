@@ -83,26 +83,33 @@ export class componentService{
     console.log(this.categoryTips)
     this.directReturn = false;
   }
-  getSingleTipByCategory(tipType: any) {
+  getSingleTipLocal(tipType: any, keyword: any) {
+    keyword = keyword.toLowerCase()
     let escape = false
-    if (this.directReturn){
-      return{
-        id: "Empty",
-        Title: "Empty",
-        Text: "Empty",
-        TipType: "Empty",
-        ImageBase64: "Empty"
-      }
-    }
-    for ( let i = 0 ; i < this.categoryTips.length; i++){
-      if (this.categoryTips[i].TipType === tipType){
-        console.log("check-here")
-        this.tempTip = this.categoryTips[i]
-        this.categoryTips.splice(i ,1);
-        escape = true;
-      }
-      if (escape == true){
-        return this.tempTip
+    if (this.directReturn == false) {
+      for ( let i = 0 ; i < this.categoryTips.length; i++){
+        if (tipType === "search"){
+          //SUCHE NACH INHALT IN TIPPS
+          if (this.categoryTips[i].TipType.toLowerCase().includes(keyword) ||
+          this.categoryTips[i].Text.toLowerCase().includes(keyword) ||
+          this.categoryTips[i].Title.toLowerCase().includes(keyword) ||
+          this.categoryTips[i].id.toLowerCase().includes(keyword) ){
+            //console.log("check-here")
+            this.tempTip = this.categoryTips[i]
+            this.categoryTips.splice(i ,1);
+            escape = true;
+          }
+        }else{
+          if (this.categoryTips[i].TipType === tipType ){
+            //console.log("check-here")
+            this.tempTip = this.categoryTips[i]
+            this.categoryTips.splice(i ,1);
+            escape = true;
+          }
+        }
+        if (escape == true){
+          return this.tempTip
+        }
       }
     }
     if (escape == false){
@@ -127,7 +134,7 @@ export class componentService{
     });
   }
   //Abrufen eines Tipps anhand der ID
-  getSingleTip (tipId: any){
+  getSingleTipFromDatabase (tipId: any){
     return this.http.get<{ _id: string, Title: string, Text: string, TipType: string; ImageBase64: string }>(
       "http://localhost:3000/api/tips/" + tipId
     );
@@ -233,10 +240,26 @@ export class componentService{
   //#endregion
 
   //#region Questionnaire
+
+
   findQuestionnaireAnswer(myFormAnswsers: any[]) {
     throw new Error('Method not implemented.');
   }
   //#endregion
+  private searchbarVisibility!:boolean;
+  getSearchbarVisibility() {
+    return this.searchbarVisibility;
+  }
+  setSearchbarVisibility(isVisible : boolean){
+    this.searchbarVisibility = isVisible
+  }
+  private origin = ''
+  setOrigin(origin: string){
+    this.origin = origin
+  }
+  getOrigin(){
+    return this.origin
+  }
 }
 
 

@@ -12,8 +12,9 @@ import { componentService } from '../../componentService.service';
 export class OneTipComponent implements OnInit {
 
   constructor(public componentService: componentService, public route: ActivatedRoute, public router:Router) {}
-  private mode = "alltips";
+  private mode = "category";
   private tipType: any;
+  private keyword: any;
   private showSub: Subscription = new Subscription();
   public show!: Boolean;
   public imgClass!: any;
@@ -42,21 +43,29 @@ export class OneTipComponent implements OnInit {
       } else if (this.router.url.indexOf("/alltips/schwarz") > -1) {
         this.tipType = "schwarz";
       } else if (this.router.url.indexOf("/alltips/sondermuell") > -1) {
-        this.tipType = "sondermuell";
+        this.tipType = "sondermuell";}
+      else if (paramMap.has("keyword")) {
+          //console.log('KEYWORD')
+          this.tipType = "search"
+          this.keyword = paramMap.get("keyword")
+          //console.log(this.keyword)
       } else {
-        this.mode = "random"
+        this.mode = "hide"
         this.tipType = "Empty"
-      }
-      this.imgClass = this.tipType
 
-      console.log(this.tipType)
-      if (this.tipType != "Empty" && this.mode != "random") {
-        this.tip = this.componentService.getSingleTipByCategory(this.tipType)
-        console.log("show")
-        if (this.tip.TipType != "Empty"){this.componentService.showTip()}
       }
-      if (this.mode == "random"){
-        this.show = true
+
+
+      //console.log(this.tipType)
+      if (this.tipType != "Empty" && this.mode == "category") {
+        if (this.tipType != 'search'){
+          this.keyword = ''
+        }
+        this.tip = this.componentService.getSingleTipLocal(this.tipType, this.keyword)
+        this.tipType = this.tip.TipType
+        this.imgClass = this.tipType
+        //console.log("show")
+        if (this.tip.TipType != "Empty"){this.componentService.showTip()}
       }
     });
   }
