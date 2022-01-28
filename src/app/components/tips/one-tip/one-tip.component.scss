@@ -1,5 +1,6 @@
 .example-card {
-  max-width: 300px;
+  height: 500px;
+  width: 300px;
   background-color: #4e4e4e;
   border-radius: 10px;
 }
@@ -34,4 +35,8 @@
 .sondermuell {
   background-image: url(../../../../assets/images/Schaedel.svg);
   background-size:cover;
+}
+
+.mat-card-header {
+  height: 4rem;
 }
