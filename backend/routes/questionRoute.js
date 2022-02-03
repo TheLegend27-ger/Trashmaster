@@ -14,9 +14,9 @@ router.get('', (request, response, next) => {
 });
 //#endregion
 router.get("/:id", (req, res, next) => {
-  QuestionData.findById(req.params.id).then(question => {
-    if (question) {
-      res.status(200).json(question);
+  QuestionData.findById(req.params.id).then(post => {
+    if (post) {
+      res.status(200).json(post);
     } else {
       res.status(404).json({ message: "question not found!" });
     }

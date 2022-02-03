@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { TipData } from '../models/tip.model';
 import { QuestionData } from '../models/question.model';
-import { PostData } from '../models/post.model';
 //#endregion
 
 
@@ -37,21 +36,6 @@ export class componentService{
   }
   navigateToDataUploader() {
     this.router.navigate(["/data"])
-  }
-
-  private searchbarVisibility!:boolean;
-  getSearchbarVisibility() {
-    return this.searchbarVisibility;
-  }
-  setSearchbarVisibility(isVisible : boolean){
-    this.searchbarVisibility = isVisible
-  }
-  private origin = ''
-  setOrigin(origin: string){
-    this.origin = origin
-  }
-  getOrigin(){
-    return this.origin
   }
   //#endregion
 
@@ -183,74 +167,6 @@ export class componentService{
   }
   //#endregion
 
-  //#region Posts
-  private postsUpdated = new Subject<PostData[]>();
-  //Lokale Instanz der Questions
-  private posts: PostData[] =[];
-
-
-  getPosts(){
-    console.log("getPOSTS")
-    this.http
-      .get<{message: string, posts: any}>('http://localhost:3000/api/posts/')
-      .pipe(map((PostData) => {
-        return PostData.posts.map((post:any) => {
-          return{
-            id: post._id,
-            Title: post.Title,
-            Text: post.Text,
-          }
-        })
-      }))
-      .subscribe((transformedPosts) => {
-        this.posts = transformedPosts;
-        this.postsUpdated.next([...this.posts])
-        console.log(transformedPosts)
-      });
-  }
-
-  //Aktualisierung der Fragen anhand von ID und mit Payload
-  updatePost(id: any, post: PostData) {
-    console.log("updatePost")
-    this.http.put('http://localhost:3000/api/posts/' + id , post)
-      .subscribe(response => {
-        console.log(response)
-        this.navigateToDataUploader();
-      });
-  }
-  //Hinzufügen einer Frage
-  addPost(post: PostData) {
-    console.log("addPost")
-    console.log(post)
-    this.http.post<{message: string}>('http://localhost:3000/api/posts/', post)
-      .subscribe((responseData) =>{
-        this.posts.push(post);
-        this.postsUpdated.next([...this.posts]);
-        this.navigateToDataUploader();
-      });
-  }
-  //Abrufen einer Frage anhand der ID
-  getSinglePost(postId: any){
-    console.log("getSingleQuestion")
-    return this.http.get<{ _id: string, Title: string, Text: string}>(
-      "http://localhost:3000/api/posts/" + postId
-
-    );
-  }
-  //Löschen einer Frage anhand der ID
-  deletepost(postId: any) {
-    console.log("deletequestion")
-    this.http.delete('http://localhost:3000/api/posts/' + postId)
-    .subscribe(() =>{
-      const updatedPosts = this.posts.filter(post => post.id !== postId)
-      this.posts = updatedPosts;
-      this.postsUpdated.next([...this.posts]);
-      console.log('Deleted!')
-    });
-  }
-
-  //#endregion
-
   //#region Questions
   private questionsUpdated = new Subject<QuestionData[]>();
   //Lokale Instanz der Questions
@@ -330,8 +246,20 @@ export class componentService{
     throw new Error('Method not implemented.');
   }
   //#endregion
-
-
+  private searchbarVisibility!:boolean;
+  getSearchbarVisibility() {
+    return this.searchbarVisibility;
+  }
+  setSearchbarVisibility(isVisible : boolean){
+    this.searchbarVisibility = isVisible
+  }
+  private origin = ''
+  setOrigin(origin: string){
+    this.origin = origin
+  }
+  getOrigin(){
+    return this.origin
+  }
 }
 
 
