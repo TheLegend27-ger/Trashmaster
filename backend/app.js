@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:500
 // Importieren der Mongoose Schemata
 const questionRoutes = require('./routes/questionRoute');
 const tipRoutes = require('./routes/tipRoute');
+const postRoutes = require('./routes/postRoute');
 
 //#region Database connection
 //Verbindung mit der lokalen MongoDB
@@ -34,6 +35,7 @@ mongoose.connect(mongoURI,{ useNewUrlParser: true, useUnifiedTopology: true })
 //Nutzung der Schemata und export des gesamten app Moduls
 app.use("/api/questions",questionRoutes)
 app.use("/api/tips",tipRoutes)
+app.use("/api/posts", postRoutes)
 
 module.exports = app;
 
