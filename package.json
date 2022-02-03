@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "4": "^0.0.0",
     "@angular/animations": "^13.2.0",
     "@angular/cdk": "^13.2.1",
     "@angular/common": "^13.2.0",
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^13.2.0",
     "@angular/router": "^13.2.0",
     "body-parser": "^1.19.1",
+    "browserify-zlib": "^0.2.0",
     "express": "^4.17.2",
     "mongoose": "^6.1.7",
     "rxjs": "~6.6.0",
