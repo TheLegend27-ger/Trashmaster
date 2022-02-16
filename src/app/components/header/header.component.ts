@@ -42,9 +42,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
           //this.isLoading = false;
         }, 1);
       });
-
+      this.componentService.setSearchbarVisibility(true)
       window.addEventListener("beforeunload", function(event) { event.returnValue = false });
-      this.checkVisibility;
+      this.checkVisibility();
 
   }
   //#endregion
@@ -127,7 +127,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.componentService.setSearchbarVisibility(false)
     this.checkVisibility();
   }
-  hasNoKeyword = true
+  hasNoKeyword = this.componentService.getSearchbarVisibility();
   checkVisibility(){
     this.hasNoKeyword = this.componentService.getSearchbarVisibility()
     console.log("check" + this.hasNoKeyword)
