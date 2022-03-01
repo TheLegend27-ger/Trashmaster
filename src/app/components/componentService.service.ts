@@ -74,7 +74,7 @@ export class componentService{
 
   getTips(): void{
     this.http
-      .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
+      .get<{message: string, tips: any}>('ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips')
       .pipe(map((tipData:any) => {
         return tipData.tips.map((tip:any) => {
           return{
