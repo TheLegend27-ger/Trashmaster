@@ -3,7 +3,6 @@ const router = express.Router();
 
 const TipData = require('../models/tipModel')
 
-
 //#region get questions
 router.get('', (request, response, next) => {
   TipData.find().then(documents => {
@@ -12,6 +11,7 @@ router.get('', (request, response, next) => {
       tips: documents
     });
   });
+
 });
 router.get("/:id", (req, res, next) => {
   TipData.findById(req.params.id).then(post => {

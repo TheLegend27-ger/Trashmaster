@@ -73,6 +73,7 @@ export class componentService{
   }
 
   getTips(): void{
+    console.log("getTips()")
     this.http
       .get<{message: string, tips: any}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips')
       .pipe(map((tipData:any) => {
@@ -96,7 +97,11 @@ export class componentService{
   setCategoryTips() {
     console.log("setCategoryTips")
     this.categoryTips = [...this.tips]
-    console.log(this.categoryTips)
+    while (!this.categoryTips){
+      console.log(this.categoryTips)
+    }
+
+
     this.directReturn = false;
   }
   getSingleTipLocal(tipType: any, keyword: any) {
