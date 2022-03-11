@@ -6,3 +6,46 @@
 .mat-form-field {
   margin-top: 16px;
 }
+
+.questiongroup-div {
+  margin: auto;
+  width: 50%;
+  margin-top: 16px;
+}
+
+.allgemein, .braun, .blau, .gelb, .glas, .schwarz, .sondermuell {
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+}
+
+.bottom-div {
+  width: 30%;
+}
+
+.buttongroup-div {
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.showResult-div {
+  float: left;
+  border: solid #222222 2px;
+  border-radius: 10px;
+  background-color: #4b4b4b;
+}
+
+.nextPage-div {
+  float: right;
+  border: solid #222222 2px;
+  border-radius: 10px;
+  background-color: #4b4b4b;
+}
+
+.questionwithanswers {
+  border: solid #202020 3px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  background-color: #4b4b4b;
+}

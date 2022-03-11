@@ -1,378 +1,585 @@
-
 <mat-stepper labelPosition="bottom" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup" (submit)="onSubmitCategory('firstFormGroup', 'allgemein', '1')">
-      <ng-template matStepLabel> Seite 1 </ng-template>
+      <ng-template matStepLabel> Allgemein </ng-template>
 
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-        <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q1">
-            <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-            <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-            <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-            <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-          </mat-radio-group>
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q2">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q3">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q4">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q5">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q6">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q1">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q2">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q3">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q4">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q5">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="allgemein"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q6">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
 
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup" (submit)="onSubmitCategory('secondFormGroup', 'blau', '1')">
-      <ng-template matStepLabel> Seite 2 </ng-template>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q7">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q8">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option"required formControlName="Q9">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q10">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q11">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q12">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Blau </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q7">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q8">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q9">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q10">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q11">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="blau"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q12">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
   <mat-step [stepControl]="thirdFormGroup">
     <form [formGroup]="thirdFormGroup" (submit)="onSubmitCategory('thirdFormGroup', 'braun', '1')">
-      <ng-template matStepLabel> Seite 3 </ng-template>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q13">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q14">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q15">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q16">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q17">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q18">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Braun </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q13">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q14">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q15">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q16">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q17">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="braun"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q18">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
   <mat-step [stepControl]="fourthFormGroup">
     <form [formGroup]="fourthFormGroup"(submit)="onSubmitCategory('fourthFormGroup', 'gelb', '1')">
-      <ng-template matStepLabel> Seite 4 </ng-template>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q19">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q20">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q21">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q22">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q23">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q24">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Gelb </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q19">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q20">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q21">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q22">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q23">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="gelb"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q24">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
   <mat-step [stepControl]="fifthFormGroup">
     <form [formGroup]="fifthFormGroup" (submit)="onSubmitCategory('fifthFormGroup', 'glas', '1')">
-      <ng-template matStepLabel> Seite 5 </ng-template>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option"required formControlName="Q25">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q26">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q27">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q28">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q29">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q30">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Glas </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q25">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q26">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q27">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q28">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q29">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="glas"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q30">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
   <mat-step [stepControl]="sixthFormGroup">
     <form [formGroup]="sixthFormGroup"(submit)="onSubmitCategory('sixthFormGroup', 'schwarz', '1')">
-      <ng-template matStepLabel> Seite 6 </ng-template>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q31">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option"required formControlName="Q32">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q33">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q34">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option"required formControlName="Q35">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q36">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Schwarz </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q31">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q32">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q33">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q34">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q35">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="schwarz"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q36">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Weiter </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
   <mat-step [stepControl]="seventhFormGroup">
     <form [formGroup]="seventhFormGroup"(submit)="onSubmitCategory('seventhFormGroup', 'sondermuell', '1')">
-      <ng-template matStepLabel> Seite 7 </ng-template>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q37">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q38">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q39">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q40">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q41">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
-      <mat-radio-group class="radio" aria-label="Select an option" required formControlName="Q42">
-        <mat-radio-button class="radiobtn" value="Answer1" > Option 1 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer2" > Option 2 </mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer3" > Option 2</mat-radio-button>
-        <mat-radio-button class="radiobtn" value="Answer4" > Option 3 </mat-radio-button>
-      </mat-radio-group>
-      <div>
-        <button mat-button id="result"> Lösung anzeigen </button>
-      </div>
-      <div>
-        <button mat-button (click)="goForward(stepper)"> Weiter </button>
+      <ng-template matStepLabel> Sondermüll </ng-template>
+
+      <div class="questiongroup-div">
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q37">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q38">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q39">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q40">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q41">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="questionwithanswers">
+          <p class="sondermuell"> Hier steht eine Frage. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam? </p>
+          <div class="buttongroup-div">
+            <mat-radio-group  class="radio" aria-label="Select an option" required formControlName="Q42">
+              <mat-radio-button class="radiobtn" value="Answer1" color="primary"> Option 1 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer2" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer3" color="primary"> Option 2 </mat-radio-button>
+              <mat-radio-button class="radiobtn" value="Answer4" color="primary"> Option 3 </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="bottom-div">
+          <div class="showResult-div">
+            <button mat-button id="result"> Lösung anzeigen </button>
+          </div>
+          <div class="nextPage-div">
+            <button mat-button (click)="goForward(stepper)"> Fertig </button>
+          </div>
+        </div>
       </div>
     </form>
   </mat-step>
+
       <div>
         <button mat-button matStepperNext> Fertig </button>
       </div>
