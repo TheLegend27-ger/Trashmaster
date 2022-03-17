@@ -75,7 +75,7 @@ export class componentService{
   getTips(): void{
     console.log("getTips()")
     this.http
-      .get<{message: string, tips: any}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips')
+      .get<{message: string, tips: any}>('http://localhost:3000/api/tips')
       .pipe(map((tipData:any) => {
         return tipData.tips.map((tip:any) => {
           return{
@@ -146,7 +146,7 @@ export class componentService{
   }
   //Löschung eines Tipps anhand der ID
   deletetip(tipId: any) {
-    this.http.delete('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips/' + tipId)
+    this.http.delete('http://localhost:3000/api/tips/' + tipId)
     .subscribe(() =>{
       const updatedTips = this.tips.filter(tip => tip.id !== tipId)
       this.tips = updatedTips;
@@ -157,7 +157,7 @@ export class componentService{
   //Abrufen eines Tipps anhand der ID
   getSingleTipFromDatabase (tipId: any){
     return this.http.get<{ _id: string, Title: string, Text: string, TipType: string; ImageBase64: string }>(
-      "http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips/" + tipId
+      "http://localhost:3000/api/tips/" + tipId
     );
   }
   //Aktualisierung eines Tipps anhand der ID und mit Payload
@@ -170,7 +170,7 @@ export class componentService{
       ImageBase64: tip.ImageBase64
     }
     console.log(id)
-    this.http.put('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips/' + id , tipToUpdate)
+    this.http.put('http://localhost:3000/api/tips/' + id , tipToUpdate)
       .subscribe(response => {
         console.log(response)
         this.navigateToDataUploader();
@@ -179,7 +179,7 @@ export class componentService{
   //Hinzufügen eines neuen Tipp zur Datenbank
   addTip(tip: TipData){
     console.log(tip)
-    this.http.post<{message: string}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/tips/', tip)
+    this.http.post<{message: string}>('http://localhost:3000/api/tips/', tip)
       .subscribe((responseData) =>{
         this.tips.push(tip);
         this.tipsUpdated.next([...this.tips]);
@@ -197,7 +197,7 @@ export class componentService{
   getPosts(){
     console.log("getPOSTS")
     this.http
-      .get<{message: string, posts: any}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/posts/')
+      .get<{message: string, posts: any}>('http://localhost:3000/api/posts/')
       .pipe(map((PostData) => {
         return PostData.posts.map((post:any) => {
           return{
@@ -217,7 +217,7 @@ export class componentService{
   //Aktualisierung der Fragen anhand von ID und mit Payload
   updatePost(id: any, post: PostData) {
     console.log("updatePost")
-    this.http.put('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/posts/' + id , post)
+    this.http.put('http://localhost:3000/api/posts/' + id , post)
       .subscribe(response => {
         console.log(response)
         this.navigateToDataUploader();
@@ -227,7 +227,7 @@ export class componentService{
   addPost(post: PostData) {
     console.log("addPost")
     console.log(post)
-    this.http.post<{message: string}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/posts/', post)
+    this.http.post<{message: string}>('http://localhost:3000/api/posts/', post)
       .subscribe((responseData) =>{
         this.posts.push(post);
         this.postsUpdated.next([...this.posts]);
@@ -238,14 +238,14 @@ export class componentService{
   getSinglePost(postId: any){
     console.log("getSingleQuestion")
     return this.http.get<{ _id: string, Title: string, Text: string}>(
-      "http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com3000/api/posts/" + postId
+      "http://localhost3000/api/posts/" + postId
 
     );
   }
   //Löschen einer Frage anhand der ID
   deletepost(postId: any) {
     console.log("deletequestion")
-    this.http.delete('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/posts/' + postId)
+    this.http.delete('http://localhost:3000/api/posts/' + postId)
     .subscribe(() =>{
       const updatedPosts = this.posts.filter(post => post.id !== postId)
       this.posts = updatedPosts;
@@ -265,7 +265,7 @@ export class componentService{
   getQuestions(){
     console.log("getquestions")
     this.http
-      .get<{message: string, questions: any}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/questions/')
+      .get<{message: string, questions: any}>('http://localhost:3000/api/questions/')
       .pipe(map((questionData) => {
         return questionData.questions.map((question:any) => {
           return{
@@ -291,7 +291,7 @@ export class componentService{
   //Aktualisierung der Fragen anhand von ID und mit Payload
   updateQuestion(id: any, question: QuestionData) {
     console.log("updateQuestion")
-    this.http.put('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/questions/' + id , question)
+    this.http.put('http://localhost:3000/api/questions/' + id , question)
       .subscribe(response => {
         console.log(response)
         this.navigateToDataUploader();
@@ -301,7 +301,7 @@ export class componentService{
   addQuestion(question: QuestionData) {
     console.log("addQuestion")
     console.log(question)
-    this.http.post<{message: string}>('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/questions/', question)
+    this.http.post<{message: string}>('http://localhost:3000/api/questions/', question)
       .subscribe((responseData) =>{
         this.questions.push(question);
         this.questionsUpdated.next([...this.questions]);
@@ -312,13 +312,13 @@ export class componentService{
   getSingleQuestion(questionId: any){
     console.log("getSingleQuestion")
     return this.http.get<{ _id: string, Title: string, Question: string, Answer1: string, Answer2: string, Answer3: string, Answer4: string,  Answer: string, QuestionType: string }>(
-      "http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/questions/" + questionId
+      "http://localhost:3000/api/questions/" + questionId
     );
   }
   //Löschen einer Frage anhand der ID
   deletequestion(questionId: any) {
     console.log("deletequestion")
-    this.http.delete('http://ec2-3-66-210-115.eu-central-1.compute.amazonaws.com:3000/api/questions/' + questionId)
+    this.http.delete('http://localhost:3000/api/questions/' + questionId)
     .subscribe(() =>{
       const updatedQuestions = this.questions.filter(question => question.id !== questionId)
       this.questions = updatedQuestions;
